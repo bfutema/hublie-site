@@ -1,0 +1,24 @@
+import React, { useState } from 'react';
+import { RiMenu3Fill } from 'react-icons/ri'
+import { AiOutlineClose } from 'react-icons/ai'
+
+import { Menu } from '../Menu';
+import { Container } from './styles';
+
+export const Burger: React.FC = () => {  
+  const [isOpen, setIsOpen] = useState(false)
+
+  const Icon = !isOpen ? (
+    <RiMenu3Fill color="#3C1667" size={24} onClick={() => setIsOpen(true)} />
+  ) : (
+    <AiOutlineClose color="#fff" size={24} onClick={() => setIsOpen(false)} />
+  );
+  
+  return (
+    <Container isOpen={isOpen}>
+      {Icon}
+    
+      <Menu isOpen={isOpen}/>
+    </Container>
+  );
+};
