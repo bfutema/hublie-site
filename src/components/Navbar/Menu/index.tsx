@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Container } from './styles';
 
 interface MenuProps {
-  isOpen: boolean
+  isOpen: boolean;
 }
 
-export const Menu: React.FC<MenuProps> = ({ isOpen }) => {  
-
+export const Menu: React.FC<MenuProps> = ({ isOpen }) => {
   return (
     <Container isOpen={isOpen}>
       <li>Home</li>
