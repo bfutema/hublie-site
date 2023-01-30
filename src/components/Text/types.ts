@@ -1,3 +1,5 @@
 import { theme } from '@/styles/themes';
 
-export type WheightType = keyof typeof theme.fontWeights;
+export type WeightType = keyof typeof theme.fontWeights;
+
+export type SizeType = keyof typeof theme.fontSizes;

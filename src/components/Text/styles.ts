@@ -2,18 +2,21 @@ import styled, { css } from 'styled-components';
 
 import { ThemeType } from '@/interfaces/Theme';
 
-import { WheightType } from './types';
+import { SizeType, WeightType } from './types';
 
 interface ContainerProps extends ThemeType {
-  weight: WheightType;
+  size: SizeType;
+  weight: WeightType;
 }
 
 export const Container = styled.div<ContainerProps>`
-  ${({ theme, weight }: ContainerProps) => css`
-    background: red;
+  ${({ theme, size, weight }: ContainerProps) => css`
+    width: fit-content;
 
+    &,
     * {
       font-family: ${theme.fonts.default};
+      font-size: ${theme.fontSizes[size]};
       font-weight: ${theme.fontWeights[weight]};
     }
   `}

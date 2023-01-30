@@ -1,14 +1,30 @@
 import React from 'react';
 
-import { WheightType } from './types';
+import { Poppins } from '@next/font/google';
+
+import { SizeType, WeightType } from './types';
 
 import { Container } from './styles';
 
+const poppins = Poppins({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  subsets: ['latin'],
+});
+
 interface TextProps {
-  weight: WheightType;
+  size?: SizeType;
+  weight?: WeightType;
   children?: React.ReactNode;
 }
 
-export const Text: React.FC<TextProps> = ({ weight, children }) => {
-  return <Container weight={weight}>{children}</Container>;
+export const Text: React.FC<TextProps> = ({
+  size = 'md',
+  weight = 'medium',
+  children,
+}) => {
+  return (
+    <Container size={size} weight={weight} className={poppins.className}>
+      {children}
+    </Container>
+  );
 };
