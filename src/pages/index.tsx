@@ -1,9 +1,7 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 
-import { ButtonLink } from '@/components/atoms/ButtonLink';
-import { Logo } from '@/components/atoms/Logo';
-import { Text } from '@/components/atoms/Text';
+import { Header } from '@/components/molecules/Header';
 
 // import Image from 'next/image';
 
@@ -20,15 +18,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <h1>Hublie</h1>
-
-        <Logo size="sm" />
-
-        <ButtonLink href="/">
-          <Text size="sm" weight="medium">
-            Acesse a plataforma
-          </Text>
-        </ButtonLink>
+        <Header />
       </main>
     </>
   );
