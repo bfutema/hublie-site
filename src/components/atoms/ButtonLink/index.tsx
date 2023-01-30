@@ -6,11 +6,16 @@ import { Container } from './styles';
 
 interface ButtonLinkProps extends LinkProps {
   children: React.ReactNode;
+  className?: string;
 }
 
-export const ButtonLink: React.FC<ButtonLinkProps> = ({ children, href }) => {
+export const ButtonLink: React.FC<ButtonLinkProps> = ({
+  href,
+  className,
+  children,
+}) => {
   return (
-    <Container>
+    <Container className={className}>
       <Link href={href}>{children}</Link>
     </Container>
   );
