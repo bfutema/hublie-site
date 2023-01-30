@@ -1,8 +1,9 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 
-import { ButtonLink } from '@/components/ButtonLink';
-import { Text } from '@/components/Text';
+import { ButtonLink } from '@/components/atoms/ButtonLink';
+import { Logo } from '@/components/atoms/Logo';
+import { Text } from '@/components/atoms/Text';
 
 // import Image from 'next/image';
 
@@ -20,6 +21,8 @@ const Home: NextPage = () => {
 
       <main>
         <h1>Hublie</h1>
+
+        <Logo size="sm" />
 
         <ButtonLink href="/">
           <Text size="sm" weight="medium">
