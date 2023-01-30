@@ -11,6 +11,17 @@ export const Container = styled.ul<ContainerProps>`
     gap: ${theme.space[6]};
     display: flex;
 
+    li {
+      color: #fff;
+      font-size: ${theme.fontSizes.sm};
+
+      a {
+        /* color: ${theme.colors.secondary500}; */
+        color: ${theme.colors.neutralGray700};
+        text-decoration: none;
+      }
+    }
+
     .close-burger-menu-button {
       border: none;
       background: transparent;
@@ -41,6 +52,7 @@ export const Container = styled.ul<ContainerProps>`
 
       li {
         color: #fff;
+        font-size: ${theme.fontSizes.sm};
       }
 
       .close-burger-menu-button {

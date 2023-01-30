@@ -19,19 +19,27 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, setIsOpen }) => {
       </li>
 
       <li>
-        <Link href="/">About Us</Link>
+        <Link href="/">Candidatos</Link>
       </li>
 
       <li>
-        <Link href="/">Contact Us</Link>
+        <Link href="/">Empresas</Link>
       </li>
 
       <li>
-        <Link href="/">Sign In</Link>
+        <Link href="/">Recrutadores</Link>
       </li>
 
       <li>
-        <Link href="/">Sign Up</Link>
+        <Link href="/">Sobre a Hublie</Link>
+      </li>
+
+      <li>
+        <Link href="/">Social</Link>
+      </li>
+
+      <li>
+        <Link href="/">Blog</Link>
       </li>
 
       <button type="button" className="close-burger-menu-button">

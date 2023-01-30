@@ -9,4 +9,6 @@ export const colors = {
   primary900: '#371B63',
 
   secondary500: '#FF7C02',
+
+  neutralGray700: '#9497A1',
 };
