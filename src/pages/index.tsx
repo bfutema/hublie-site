@@ -2,6 +2,7 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 
 import { Header } from '@/components/molecules/Header';
+import { Hero } from '@/components/molecules/Hero';
 
 // import Image from 'next/image';
 
@@ -19,6 +20,8 @@ const Home: NextPage = () => {
 
       <main>
         <Header />
+
+        <Hero />
       </main>
     </>
   );

@@ -7,11 +7,13 @@ import { SizeType, WeightType } from './types';
 interface ContainerProps extends ThemeType {
   size: SizeType;
   weight: WeightType;
+  maxWidth?: string;
 }
 
 export const Container = styled.div<ContainerProps>`
-  ${({ theme, size, weight }: ContainerProps) => css`
+  ${({ theme, size, weight, maxWidth }: ContainerProps) => css`
     width: fit-content;
+    max-width: ${maxWidth};
 
     &,
     * {

@@ -14,16 +14,23 @@ const poppins = Poppins({
 interface TextProps {
   size?: SizeType;
   weight?: WeightType;
+  maxWidth?: string;
   children?: React.ReactNode;
 }
 
 export const Text: React.FC<TextProps> = ({
   size = 'md',
   weight = 'medium',
+  maxWidth,
   children,
 }) => {
   return (
-    <Container size={size} weight={weight} className={poppins.className}>
+    <Container
+      size={size}
+      weight={weight}
+      maxWidth={maxWidth}
+      className={poppins.className}
+    >
       {children}
     </Container>
   );

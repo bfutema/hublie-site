@@ -10,4 +10,5 @@ export const Container = styled.div`
   display: inherit;
   align-items: inherit;
   justify-content: inherit;
+  flex-direction: inherit;
 `;
