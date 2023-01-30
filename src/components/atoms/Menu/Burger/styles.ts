@@ -16,10 +16,6 @@ const responsive = {
 
 export const Container = styled.div<ContainerProps>`
   svg {
-    position: fixed;
-    top: 15px;
-    right: 20px;
-
     z-index: 20;
 
     display: none;

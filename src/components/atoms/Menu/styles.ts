@@ -1,17 +1,24 @@
 import styled, { css } from 'styled-components';
 
-interface ContainerProps {
+import { ThemeType } from '@/interfaces/Theme';
+
+interface ContainerProps extends ThemeType {
   isOpen?: boolean;
 }
 
 export const Container = styled.ul<ContainerProps>`
-  ${({ isOpen }) => css`
-    list-style: none;
+  ${({ theme, isOpen }: ContainerProps) => css`
+    gap: ${theme.space[6]};
     display: flex;
-    flex-flow: row nowrap;
 
-    li {
-      padding: 18px 10px;
+    .close-burger-menu-button {
+      border: none;
+      background: transparent;
+
+      position: fixed;
+      right: ${theme.space[4]};
+
+      display: none;
     }
 
     @media (max-width: 768px) {
@@ -34,6 +41,10 @@ export const Container = styled.ul<ContainerProps>`
 
       li {
         color: #fff;
+      }
+
+      .close-burger-menu-button {
+        display: block;
       }
     }
   `}
