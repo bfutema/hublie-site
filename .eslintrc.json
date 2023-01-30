@@ -1,3 +1,153 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier",
+    "import-helpers",
+    "unused-imports"
+  ],
+  "rules": {
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": [
+          "PascalCase"
+        ],
+        "custom": {
+          "regex": "(^[A-Z])*(Props|Response|Params|Request|Type|Context$)",
+          "match": true
+        }
+      },
+      {
+        "selector": "typeAlias",
+        "format": [
+          "PascalCase"
+        ],
+        "custom": {
+          "regex": "(^[A-Z])*(Props|Response|Params|Request|Type|Context$)",
+          "match": true
+        }
+      }
+    ],
+    "camelcase": "off",
+    "class-methods-use-this": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "import/no-duplicates": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off",
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "/^react/",
+          "module",
+          "/^!@/types|!@/assets|!@/components|!@/constants|!@/contexts|!@/helpers|!@/hooks|!@/interfaces|!@/locales|!layouts|!@/pages|!@/routes|!@/services|!@/store|!@/styles|!@/utils/",
+          "/^@/types|@/assets|@/components|@/constants|@/contexts|@/helpers|@/hooks|@/interfaces|@/locales|@/layouts|@/pages|@/routes|@/services|@/store|@/styles|@/utils/",
+          ["parent", "sibling", "index"],
+          "/.styles/"
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 80,
+        "tabWidth": 2,
+        "singleQuote": true,
+        "trailingComma": "all",
+        "arrowParens": "always",
+        "semi": true,
+        "endOfLine": "auto"
+      }
+    ],
+    "linebreak-style": 0,
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "tron",
+          "log"
+        ]
+      }
+    ],
+    "no-nested-ternary": 0,
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "no-self-assign": "off",
+    "no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "no-use-before-define": "off",
+    "react/function-component-definition": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".tsx"
+        ]
+      }
+    ],
+    "react/jsx-no-constructed-context-values": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/no-unused-prop-types": "off",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "unused-imports/no-unused-imports": "error",
+		"unused-imports/no-unused-vars": [
+			"warn",
+			{
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+		]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
 }

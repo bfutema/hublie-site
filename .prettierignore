@@ -1,0 +1,16 @@
+# Libraries
+node*modules
+
+# Build
+build
+dist
+lib
+
+# Tests
+coverage
+
+# Setup
+/*.js
+/*.ts
+**/*.d.ts
+**/*.hbs
