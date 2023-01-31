@@ -13,6 +13,8 @@ export const Container = styled.div`
     padding: ${theme.space[2]} ${theme.space[4]};
 
     &:hover {
+      cursor: pointer;
+
       a {
         text-decoration: none;
       }
