@@ -35,6 +35,11 @@ export const Content = styled.div`
       color: ${theme.colors.secondary500};
       text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      min-width: calc(50vw - 54px);
+    }
   `}
 `;
 
@@ -57,5 +62,9 @@ export const Who = styled.div`
     gap: ${theme.space[2]};
     display: flex;
     align-items: center;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   `}
 `;

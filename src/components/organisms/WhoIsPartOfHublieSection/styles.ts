@@ -12,6 +12,12 @@ export const Container = styled.div`
     flex: 1;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 768px) {
+      padding: ${theme.space[4]};
+
+      gap: ${theme.space[4]};
+    }
   `}
 `;
 
@@ -19,6 +25,12 @@ export const Carousel = styled.div`
   margin-right: -148px;
 
   display: flex;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+
+    flex-direction: column;
+  }
 `;
 
 export const Navigation = styled.div`
@@ -34,6 +46,13 @@ export const Navigation = styled.div`
     > div {
       gap: ${theme.space[4]};
       display: flex;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+
+      padding: ${theme.space[4]} 0;
     }
   `}
 `;
@@ -69,6 +88,11 @@ export const NextButton = styled.button`
         stroke: ${theme.colors.white};
       }
     }
+
+    @media (max-width: 768px) {
+      width: 70px;
+      height: 40px;
+    }
   `}
 `;
 
@@ -103,6 +127,11 @@ export const PrevButton = styled.button`
         stroke: ${theme.colors.white};
       }
     }
+
+    @media (max-width: 768px) {
+      width: 70px;
+      height: 40px;
+    }
   `}
 `;
 
@@ -116,5 +145,10 @@ export const Images = styled.div`
 
   &::-webkit-scrollbar {
     height: 0px;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    gap: 8px;
   }
 `;
