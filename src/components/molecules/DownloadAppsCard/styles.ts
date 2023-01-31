@@ -23,6 +23,10 @@ export const Container = styled.div`
 
       padding: ${theme.space[4]};
     }
+
+    @media (max-width: 500px) {
+      padding: ${theme.space[2]};
+    }
   `}
 `;
 
@@ -40,6 +44,8 @@ export const ContentWrapper = styled.div`
 
     @media (max-width: 768px) {
       margin-top: 200px;
+
+      left: 0;
     }
   `}
 `;

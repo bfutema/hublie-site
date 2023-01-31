@@ -11,6 +11,8 @@ export const Container = styled.ul<ContainerProps>`
     gap: ${theme.space[6]};
     display: flex;
 
+    z-index: 10000;
+
     li {
       color: ${theme.colors.white};
       font-size: ${theme.fontSizes.sm};

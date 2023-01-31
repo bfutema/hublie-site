@@ -40,6 +40,11 @@ export const Content = styled.div`
       width: 100%;
       min-width: calc(50vw - 54px);
     }
+
+    @media (max-width: 500px) {
+      width: 100%;
+      min-width: calc(100vw - 64px);
+    }
   `}
 `;
 
