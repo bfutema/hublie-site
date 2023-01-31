@@ -12,10 +12,15 @@ export const Container = styled.ul<ContainerProps>`
     display: flex;
 
     li {
-      color: #fff;
+      color: ${theme.colors.white};
       font-size: ${theme.fontSizes.sm};
 
       transition: all 0.2s;
+
+      &.active a {
+        color: ${theme.colors.secondary500};
+        text-decoration: underline;
+      }
 
       &:hover {
         a {

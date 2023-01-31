@@ -98,40 +98,6 @@ export const PlatformBenefitsSection: React.FC<
               emphasisContinueText="comunidade de Recrutadores e HeadHunters do Brasil"
               emphasisComplementText="Ajude empresas a encontrarem o talento ideal e receba bônus exclusivos!"
             />
-
-            <BenefitCard
-              color="primary500"
-              image={image1}
-              emphasisText="Encontre a vaga ideal para você"
-              emphasisContinueText="na maior comunidade de talentos do Brasil"
-              emphasisComplementText="Conectamos você com as melhores empresas de forma rápida, simples e
-              inteligente"
-            />
-
-            <BenefitCard
-              color="secondary500"
-              image={image2}
-              emphasisText="Acelere suas contratações com soluções inteligentes"
-              emphasisContinueText="de Recrutamento e Seleção gratuitamente"
-              emphasisComplementText="Conectamos a sua empresa com os melhores talentos de forma rápida, simples e humanizada"
-            />
-
-            <BenefitCard
-              color="pink500"
-              textColor="primary800"
-              image={image3}
-              emphasisText="Conectamos pessoas e empresas de forma simples, humanizada e inteligente"
-              emphasisComplementText="Para criar experiências positivas para todo o ecossistema e estimular o crescimento das pessoas e das organizações envolvidas."
-            />
-
-            <BenefitCard
-              color="primary800"
-              textColor="white"
-              image={image4}
-              emphasisText="Faça parte da maior"
-              emphasisContinueText="comunidade de Recrutadores e HeadHunters do Brasil"
-              emphasisComplementText="Ajude empresas a encontrarem o talento ideal e receba bônus exclusivos!"
-            />
           </Images>
         </Carousel>
       </ContainerWrapper>
