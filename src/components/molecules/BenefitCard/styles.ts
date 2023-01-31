@@ -12,6 +12,7 @@ export const Container = styled(Card)`
 `;
 
 export const Image = styled(NextImage)`
+  width: 100%;
   height: 176px;
 
   border-top-left-radius: inherit;
@@ -29,6 +30,7 @@ interface ContentProps extends ThemeType {
 export const Content = styled.div<ContentProps>`
   ${({ theme, color, width }: ContentProps) => css`
     width: ${width}px;
+    min-width: ${width}px;
     height: fit-content;
 
     border-bottom-left-radius: inherit;
@@ -42,6 +44,11 @@ export const Content = styled.div<ContentProps>`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      min-width: calc(50vw - 24px);
+    }
   `}
 `;
 

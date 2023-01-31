@@ -12,6 +12,12 @@ export const Container = styled.div`
     gap: ${theme.space[10]};
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 768px) {
+      padding: ${theme.space[4]};
+
+      gap: ${theme.space[4]};
+    }
   `}
 `;
 
@@ -23,6 +29,17 @@ export const Title = styled(Text)`
       color: ${theme.colors.secondary500};
       text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+      margin: 0 auto;
+
+      font-size: ${theme.fontSizes['2xl']};
+      text-align: center;
+
+      strong {
+        font-size: ${theme.fontSizes['2xl']};
+      }
+    }
   `}
 `;
 
@@ -30,6 +47,12 @@ export const Carousel = styled.div`
   margin-right: -148px;
 
   display: flex;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+
+    flex-direction: column;
+  }
 `;
 
 export const Navigation = styled.div`
@@ -42,6 +65,16 @@ export const Navigation = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    @media (max-width: 768px) {
+      margin: 0 auto;
+
+      padding: ${theme.space[4]} 0;
+
+      gap: ${theme.space[2]};
+      flex-direction: row;
+      justify-content: center;
+    }
   `}
 `;
 
@@ -75,6 +108,13 @@ export const NextButton = styled.button`
       polyline {
         stroke: ${theme.colors.white};
       }
+    }
+
+    @media (max-width: 768px) {
+      width: 70px;
+      height: 40px;
+
+      order: 2;
     }
   `}
 `;
@@ -110,6 +150,13 @@ export const PrevButton = styled.button`
         stroke: ${theme.colors.white};
       }
     }
+
+    @media (max-width: 768px) {
+      width: 70px;
+      height: 40px;
+
+      order: 1;
+    }
   `}
 `;
 
@@ -121,5 +168,10 @@ export const Images = styled.div`
 
   &::-webkit-scrollbar {
     height: 0px;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    gap: 8px;
   }
 `;
