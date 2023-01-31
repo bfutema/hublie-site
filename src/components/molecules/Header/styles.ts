@@ -13,6 +13,10 @@ export const Container = styled.header`
     justify-content: space-between;
 
     @media (max-width: 768px) {
+      height: fit-content;
+
+      padding: ${theme.space[3]};
+
       .access-platform-button {
         display: none;
       }
