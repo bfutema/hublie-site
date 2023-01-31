@@ -48,6 +48,18 @@ export const Heading = styled.div`
         }
       }
     }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+
+      ul {
+        margin-top: 16px;
+
+        gap: 6px;
+        flex-direction: column;
+      }
+    }
   `}
 `;
 
@@ -66,4 +78,16 @@ export const Info = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    margin-bottom: 64px;
+
+    gap: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    div div {
+      max-width: 100%;
+    }
+  }
 `;

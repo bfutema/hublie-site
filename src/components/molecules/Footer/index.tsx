@@ -50,7 +50,7 @@ export const Footer: React.FC<FooterProps> = () => {
 
         <Info>
           <div>
-            <Text color="white" size="sm" weight="minRegular">
+            <Text color="neutralGray700" size="sm" weight="minRegular">
               Hublie© 2022 Todos os direitos reservados.
             </Text>
           </div>
