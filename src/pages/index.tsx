@@ -1,8 +1,10 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 
+import { DownloadAppsCard } from '@/components/molecules/DownloadAppsCard';
 import { Header } from '@/components/molecules/Header';
 import { Hero } from '@/components/molecules/Hero';
+import { ContainerWrapper } from '@/components/quarks/ContainerWrapper';
 
 // import Image from 'next/image';
 
@@ -22,6 +24,12 @@ const Home: NextPage = () => {
         <Header />
 
         <Hero />
+
+        <div style={{ padding: '120px 148px' }}>
+          <ContainerWrapper>
+            <DownloadAppsCard />
+          </ContainerWrapper>
+        </div>
       </main>
     </>
   );
