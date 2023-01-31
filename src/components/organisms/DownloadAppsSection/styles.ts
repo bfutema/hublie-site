@@ -1,5 +1,11 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
-  padding: 120px 148px;
+  ${({ theme }) => css`
+    padding: 120px 148px;
+
+    @media (max-width: 768px) {
+      padding: ${theme.space[4]};
+    }
+  `}
 `;
