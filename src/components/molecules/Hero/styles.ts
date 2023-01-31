@@ -3,13 +3,26 @@ import styled, { css } from 'styled-components';
 import { ThemeType } from '@/interfaces/Theme';
 
 export const Container = styled.div`
-  height: 882px;
+  ${({ theme }) => css`
+    height: 882px;
 
-  background: #eceff2;
+    background: #eceff2;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+      height: fit-content;
+
+      padding: ${theme.space[4]};
+
+      p {
+        font-size: ${theme.fontSizes.xl};
+        text-align: center;
+      }
+    }
+  `}
 `;
 
 export const Title = styled.h1`
@@ -30,9 +43,24 @@ export const Title = styled.h1`
     }
 
     p {
-      margin-left: ${theme.space[4]};
+      margin-left: 8px;
 
       display: inline;
+    }
+
+    @media (max-width: 768px) {
+      line-height: 0;
+      text-align: center;
+
+      padding: ${theme.space[4]} 0;
+
+      strong {
+        font-size: ${theme.fontSizes['2xl']};
+      }
+
+      p {
+        font-size: ${theme.fontSizes['2xl']};
+      }
     }
   `}
 `;

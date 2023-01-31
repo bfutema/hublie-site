@@ -22,7 +22,10 @@ export const Hero: React.FC<HeroProps> = () => {
         </Title>
 
         <Text size="xl" weight="minRegular" maxWidth="568px">
-          Para um mercado de trabalho mais transparente, inclusivo e humanizado.
+          <p>
+            Para um mercado de trabalho mais transparente, inclusivo e
+            humanizado.
+          </p>
         </Text>
       </ContainerWrapper>
     </Container>
