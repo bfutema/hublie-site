@@ -7,6 +7,7 @@ export const Container = styled.div`
 
   margin: 0 auto;
 
+  gap: inherit;
   display: inherit;
   align-items: inherit;
   justify-content: inherit;

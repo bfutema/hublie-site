@@ -15,6 +15,15 @@ export const Container = styled.ul<ContainerProps>`
       color: #fff;
       font-size: ${theme.fontSizes.sm};
 
+      transition: all 0.2s;
+
+      &:hover {
+        a {
+          color: ${theme.colors.secondary500};
+          text-decoration: underline;
+        }
+      }
+
       a {
         /* color: ${theme.colors.secondary500}; */
         color: ${theme.colors.neutralGray700};

@@ -15,13 +15,13 @@ export const DownloadAppsCard: React.FC<DownloadAppsCardProps> = () => {
   return (
     <Container>
       <ContentWrapper>
-        <Title size="xl">
+        <Title color="white" size="xl">
           <h3>
             Baixe o app da <strong>Hublie grátis</strong>
           </h3>
         </Title>
 
-        <Title size="sm" weight="minRegular">
+        <Title color="white" size="sm" weight="minRegular">
           Facilite sua jornada na busca por emprego e não perca nenhuma
           oportunidade de trabalho.
         </Title>

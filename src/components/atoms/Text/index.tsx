@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Poppins } from '@next/font/google';
 
-import { SizeType, WeightType } from './types';
+import { ColorType, SizeType, WeightType } from './types';
 
 import { Container } from './styles';
 
@@ -12,6 +12,7 @@ const poppins = Poppins({
 });
 
 interface TextProps {
+  color?: ColorType;
   size?: SizeType;
   weight?: WeightType;
   maxWidth?: string;
@@ -20,6 +21,7 @@ interface TextProps {
 }
 
 export const Text: React.FC<TextProps> = ({
+  color = 'black',
   size = 'md',
   weight = 'medium',
   maxWidth,
@@ -28,6 +30,7 @@ export const Text: React.FC<TextProps> = ({
 }) => {
   return (
     <Container
+      color={color}
       size={size}
       weight={weight}
       maxWidth={maxWidth}

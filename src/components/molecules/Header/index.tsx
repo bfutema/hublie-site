@@ -21,7 +21,7 @@ export const Header: React.FC<HeaderProps> = () => {
         <Burger />
 
         <ButtonLink href="/" className="access-platform-button">
-          <Text size="sm" weight="medium">
+          <Text color="white" size="sm" weight="medium">
             Acesse a plataforma
           </Text>
         </ButtonLink>
