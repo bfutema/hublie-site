@@ -16,6 +16,7 @@ interface TextProps {
   weight?: WeightType;
   maxWidth?: string;
   children?: React.ReactNode;
+  className?: string;
 }
 
 export const Text: React.FC<TextProps> = ({
@@ -23,13 +24,14 @@ export const Text: React.FC<TextProps> = ({
   weight = 'medium',
   maxWidth,
   children,
+  className,
 }) => {
   return (
     <Container
       size={size}
       weight={weight}
       maxWidth={maxWidth}
-      className={poppins.className}
+      className={`${poppins.className} ${className}`}
     >
       {children}
     </Container>
