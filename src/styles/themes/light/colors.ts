@@ -14,5 +14,6 @@ export const colors = {
   pink500: '#FFA6D4',
 
   neutralGray200: '#f5f5f5',
+  neutralGray300: '#eceff2',
   neutralGray700: '#9497A1',
 };

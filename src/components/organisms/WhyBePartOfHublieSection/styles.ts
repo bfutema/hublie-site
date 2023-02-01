@@ -1,11 +1,12 @@
 import styled, { css } from 'styled-components';
 
+import { Card } from '@/components/atoms/Card';
 import { Text } from '@/components/atoms/Text';
 import { ThemeType } from '@/interfaces/Theme';
 
 export const Container = styled.div`
   ${({ theme }: ThemeType) => css`
-    background: ${theme.colors.neutralGray300};
+    background: ${theme.colors.primary500};
 
     padding: 120px 148px;
 
@@ -23,22 +24,11 @@ export const Container = styled.div`
 
 export const Title = styled(Text)`
   ${({ theme }: ThemeType) => css`
-    color: ${theme.colors.primary800};
-
-    strong {
-      color: ${theme.colors.secondary500};
-      text-decoration: underline;
-    }
-
     @media (max-width: 768px) {
       margin: 0 auto;
 
       font-size: ${theme.fontSizes['2xl']};
       text-align: center;
-
-      strong {
-        font-size: ${theme.fontSizes['2xl']};
-      }
     }
   `}
 `;
@@ -174,4 +164,26 @@ export const Images = styled.div`
     display: flex;
     gap: 8px;
   }
+`;
+
+export const WhyCard = styled(Card)`
+  ${({ theme }: ThemeType) => css`
+    min-width: 350px;
+
+    padding: ${theme.space[4]};
+
+    gap: ${theme.space[2]};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    > div:nth-of-type(1) {
+      margin-top: 8px;
+    }
+
+    p {
+      text-align: center;
+    }
+  `}
 `;

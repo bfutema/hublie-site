@@ -1,32 +1,39 @@
 import React from 'react';
 
+import { ButtonLink } from '@/components/atoms/ButtonLink';
 import { Text } from '@/components/atoms/Text';
 import { ContainerWrapper } from '@/components/quarks/ContainerWrapper';
 
 import { Container, Title } from './styles';
 
-interface HeroProps {
+interface CandidatesHeroSectionProps {
   children?: React.ReactNode;
 }
 
-export const Hero: React.FC<HeroProps> = () => {
+export const CandidatesHeroSection: React.FC<
+  CandidatesHeroSectionProps
+> = () => {
   return (
     <Container>
       <ContainerWrapper>
-        <Title>
-          <strong>Conectamos pessoas e empresas</strong>
+        <Title color="white">
+          <strong>
+            Encontre a vaga ideal <br /> para você
+          </strong>
 
           <p>
-            de forma <br /> inteligente
+            na maior <br /> comunidade de talentos <br /> do Brasil
           </p>
         </Title>
 
-        <Text size="xl" weight="minRegular" maxWidth="568px">
+        <Text color="white" size="xl" weight="minRegular" maxWidth="568px">
           <p>
             Para um mercado de trabalho mais transparente, inclusivo e
             humanizado.
           </p>
         </Text>
+
+        <ButtonLink href="/">FAÇA PARTE GRATUITAMENTE</ButtonLink>
       </ContainerWrapper>
     </Container>
   );

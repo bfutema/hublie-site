@@ -3,10 +3,10 @@ import styled, { css } from 'styled-components';
 import { ThemeType } from '@/interfaces/Theme';
 
 export const Container = styled.div`
-  ${({ theme }) => css`
+  ${({ theme }: ThemeType) => css`
     height: 882px;
 
-    background: #eceff2;
+    background: ${theme.colors.neutralGray300};
 
     display: flex;
     flex-direction: column;
