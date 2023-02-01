@@ -15,11 +15,11 @@ import {
   CustomButton,
 } from './styles';
 
-interface FitlerJobsSectionProps {
+interface FilterJobsSectionProps {
   children?: React.ReactNode;
 }
 
-export const FitlerJobsSection: React.FC<FitlerJobsSectionProps> = () => {
+export const FilterJobsSection: React.FC<FilterJobsSectionProps> = () => {
   return (
     <Container>
       <ContainerWrapper>

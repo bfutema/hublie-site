@@ -1,8 +1,7 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 
-import { Footer } from '@/components/molecules/Footer';
-import { Header } from '@/components/molecules/Header';
+import { EnterprisesTemplate } from '@/components/templates/EnterprisesTemplate';
 
 const Enterprises: NextPage = () => {
   return (
@@ -17,9 +16,7 @@ const Enterprises: NextPage = () => {
       </Head>
 
       <main>
-        <Header />
-        <h1>Empresas</h1>
-        <Footer />
+        <EnterprisesTemplate />
       </main>
     </>
   );
