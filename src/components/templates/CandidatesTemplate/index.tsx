@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Footer } from '@/components/molecules/Footer';
 import { Header } from '@/components/molecules/Header';
-import { AllFreeSection } from '@/components/organisms/AllFreeSection';
 import { BestProfessionalsInHublie } from '@/components/organisms/BestProfessionalsInHublie';
+import { CanidatesAllFreeSection } from '@/components/organisms/CandidatesAllFreeSection';
 import { CandidatesHeroSection } from '@/components/organisms/CandidatesHeroSection';
 import { FilterJobsSection } from '@/components/organisms/FilterJobsSection';
 import { WhoIsPartOfHublieSection } from '@/components/organisms/WhoIsPartOfHublieSection';
@@ -23,7 +23,7 @@ export const CandidatesTemplate: React.FC<CandidatesTemplateProps> = () => {
       <CandidatesHeroSection />
       <YourFeaturedProfileSection />
       <WhyBePartOfHublieSection />
-      <AllFreeSection />
+      <CanidatesAllFreeSection />
       <WhoIsPartOfHublieSection />
       <FilterJobsSection />
       <BestProfessionalsInHublie />

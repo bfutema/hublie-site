@@ -7,11 +7,13 @@ import { ContainerWrapper } from '@/components/quarks/ContainerWrapper';
 
 import { Container, ImageCard, FreeCard } from './styles';
 
-interface AllFreeSectionProps {
+interface CanidatesAllFreeSectionProps {
   children?: React.ReactNode;
 }
 
-export const AllFreeSection: React.FC<AllFreeSectionProps> = () => {
+export const CanidatesAllFreeSection: React.FC<
+  CanidatesAllFreeSectionProps
+> = () => {
   return (
     <Container>
       <ContainerWrapper>
