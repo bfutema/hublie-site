@@ -1,6 +1,8 @@
 import React from 'react';
 import { BsArrowRight } from 'react-icons/bs';
 
+import { v4 } from 'uuid';
+
 import { Text } from '@/components/atoms/Text';
 import { ContainerWrapper } from '@/components/quarks/ContainerWrapper';
 
@@ -29,7 +31,7 @@ export const FitlerJobsSection: React.FC<FitlerJobsSectionProps> = () => {
         <Jobs>
           {Array.from({ length: 4 * 4 }).map(() => {
             return (
-              <JobCard>
+              <JobCard key={v4()}>
                 <Text color="primary800">Vagas de enfermagem</Text>
 
                 <JobCardButton type="button">
