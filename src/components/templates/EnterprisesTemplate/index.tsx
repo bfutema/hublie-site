@@ -7,7 +7,7 @@ import { EnterprisesHeroSection } from '@/components/organisms/EnterprisesHeroSe
 import { SolutionsForYourCompany } from '@/components/organisms/SolutionsForYourCompany';
 import { WhatYouFindAtHublie } from '@/components/organisms/WhatYouFindAtHublie';
 import { YourFeaturedEnterpriseSection } from '@/components/organisms/YourFeaturedEnterprise';
-import { YoutTalentIsHere } from '@/components/organisms/YourNextTalentIsHere';
+import { YourNextTalentIsHere } from '@/components/organisms/YourNextTalentIsHere';
 
 import { Container } from './styles';
 
@@ -24,7 +24,7 @@ export const EnterprisesTemplate: React.FC<EnterprisesTemplateProps> = () => {
       <SolutionsForYourCompany />
       <WhatYouFindAtHublie />
       <CompaniesAlreadyPartOfHublie />
-      <YoutTalentIsHere />
+      <YourNextTalentIsHere />
       <Footer />
     </Container>
   );

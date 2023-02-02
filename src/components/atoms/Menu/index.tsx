@@ -37,8 +37,8 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, setIsOpen }) => {
         <Link href="/about">Sobre a Hublie</Link>
       </li>
 
-      <li className={router.pathname === '/socials' ? 'active' : ''}>
-        <Link href="/socials">Social</Link>
+      <li className={router.pathname === '/social' ? 'active' : ''}>
+        <Link href="/social">Social</Link>
       </li>
 
       <li className={router.pathname === '/blog' ? 'active' : ''}>

@@ -3,6 +3,7 @@ import React from 'react';
 import image from '@/assets/images/Mask_group.png';
 import { ButtonLink } from '@/components/atoms/ButtonLink';
 import { Text } from '@/components/atoms/Text';
+import { ContainerWrapper } from '@/components/quarks/ContainerWrapper';
 
 import { Container, CallToActionCard } from './styles';
 
@@ -15,19 +16,21 @@ export const JoinMoreRecruitersAndHeadHunters: React.FC<
 > = () => {
   return (
     <Container style={{ backgroundImage: `url(${image.src})` }}>
-      <Text color="white" size="5xl">
-        Junte-se <strong> a mais de X recrutadores </strong> e{' '}
-        <strong> HeadHunters </strong> de todo o Brasil
-      </Text>
-
-      <CallToActionCard>
-        <Text color="primary800" size="sm" weight="regular">
-          Preencha o formulário e tenha <br /> acesso aos melhores candidatos
-          <br /> agora mesmo
+      <ContainerWrapper>
+        <Text color="white" size="5xl">
+          Junte-se <strong> a mais de X recrutadores </strong> e{' '}
+          <strong> HeadHunters </strong> de todo o Brasil
         </Text>
 
-        <ButtonLink href="/">CADASTRE-SE GRATUITAMENTE</ButtonLink>
-      </CallToActionCard>
+        <CallToActionCard>
+          <Text color="primary800" size="sm" weight="regular">
+            Preencha o formulário e tenha <br /> acesso aos melhores candidatos
+            <br /> agora mesmo
+          </Text>
+
+          <ButtonLink href="/">CADASTRE-SE GRATUITAMENTE</ButtonLink>
+        </CallToActionCard>
+      </ContainerWrapper>
     </Container>
   );
 };

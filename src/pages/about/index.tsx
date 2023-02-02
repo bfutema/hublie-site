@@ -1,8 +1,7 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 
-import { Footer } from '@/components/molecules/Footer';
-import { Header } from '@/components/molecules/Header';
+import { AboutTemplate } from '@/components/templates/AboutTemplate';
 
 const About: NextPage = () => {
   return (
@@ -17,9 +16,7 @@ const About: NextPage = () => {
       </Head>
 
       <main>
-        <Header />
-        <h1>Sobre a Hublie</h1>
-        <Footer />
+        <AboutTemplate />
       </main>
     </>
   );
