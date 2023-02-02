@@ -4,11 +4,12 @@ import { ThemeType } from '@/interfaces/Theme';
 import { theme as Theme } from '@/styles/themes';
 
 interface ContainerProps extends ThemeType {
+  color: keyof typeof Theme.colors;
   backgroundColor: keyof typeof Theme.colors;
 }
 
 export const Container = styled.div<ContainerProps>`
-  ${({ theme, backgroundColor }: ContainerProps) => css`
+  ${({ theme, color, backgroundColor }: ContainerProps) => css`
     width: fit-content;
 
     border: 1px solid ${theme.colors[backgroundColor]};
@@ -26,7 +27,7 @@ export const Container = styled.div<ContainerProps>`
     }
 
     a {
-      color: ${theme.colors.white};
+      color: ${theme.colors[color]};
       text-transform: uppercase;
     }
   `}
