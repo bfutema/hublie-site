@@ -26,7 +26,13 @@ export const EnterprisesHeroSection: React.FC<
           </p>
         </Title>
 
-        <Text color="white" size="xl" weight="minRegular" maxWidth="568px">
+        <Text
+          color="white"
+          size="xl"
+          weight="minRegular"
+          maxWidth="568px"
+          className="enterprises-hero-section-text"
+        >
           <p>
             Conectamos a sua empresa com os melhores talentos de forma rápida,
             simples e humanizada

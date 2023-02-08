@@ -13,6 +13,10 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
 
+    .enterprises-hero-section-text {
+      line-height: ${theme.lineHeights.short};
+    }
+
     @media (max-width: 768px) {
       height: fit-content;
 
@@ -35,11 +39,11 @@ export const Title = styled.h1`
     color: ${theme.colors.primary900};
     font-size: ${theme.fontSizes['6xl']};
     font-weight: ${theme.fontWeights.regular};
-    line-height: ${theme.lineHeights.base};
+    line-height: ${theme.lineHeights.short};
 
     strong {
       color: ${theme.colors.white};
-      line-height: ${theme.lineHeights.base};
+      line-height: ${theme.lineHeights.short};
       text-decoration: underline;
     }
 
