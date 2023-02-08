@@ -8,7 +8,7 @@ export const Container = styled.div`
   ${({ theme }: ThemeType) => css`
     background: ${theme.colors.primary500};
 
-    padding: 120px 148px;
+    padding: 80px 148px 120px 148px;
 
     gap: ${theme.space[10]};
     display: flex;
@@ -47,23 +47,24 @@ export const Carousel = styled.div`
 
 export const Navigation = styled.div`
   ${({ theme }) => css`
-    width: fit-content;
+    width: 100%;
 
-    padding: ${theme.space[4]} ${theme.space[10]} ${theme.space[4]} 0;
+    padding: ${theme.space[4]} ${theme.space[10]} ${theme.space[12]} 0;
 
     gap: ${theme.space[8]};
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-between;
+
+    > div {
+      gap: ${theme.space[4]};
+      display: flex;
+    }
 
     @media (max-width: 768px) {
-      margin: 0 auto;
+      flex-direction: column;
+      align-items: center;
 
       padding: ${theme.space[4]} 0;
-
-      gap: ${theme.space[2]};
-      flex-direction: row;
-      justify-content: center;
     }
   `}
 `;
@@ -168,9 +169,9 @@ export const Images = styled.div`
 
 export const WhyCard = styled(Card)`
   ${({ theme }: ThemeType) => css`
-    min-width: 350px;
+    min-width: 320px;
 
-    padding: ${theme.space[4]};
+    padding: ${theme.space[10]} ${theme.space[8]};
 
     gap: ${theme.space[2]};
     display: flex;

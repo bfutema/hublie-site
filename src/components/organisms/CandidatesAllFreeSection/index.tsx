@@ -18,7 +18,7 @@ export const CanidatesAllFreeSection: React.FC<
     <Container>
       <ContainerWrapper>
         <FreeCard>
-          <Text size="5xl">
+          <Text color="primary800" size="5xl">
             Tudo
             <strong>
               100% <br /> gratuito!

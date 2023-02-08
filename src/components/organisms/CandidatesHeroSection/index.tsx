@@ -28,8 +28,8 @@ export const CandidatesHeroSection: React.FC<
 
         <Text color="white" size="xl" weight="minRegular" maxWidth="568px">
           <p>
-            Para um mercado de trabalho mais transparente, inclusivo e
-            humanizado.
+            Conectamos você com as melhores empresas de forma rápida, simples e
+            inteligente
           </p>
         </Text>
 

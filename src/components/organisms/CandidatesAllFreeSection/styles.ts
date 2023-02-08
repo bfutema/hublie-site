@@ -8,7 +8,7 @@ export const Container = styled.div`
   ${({ theme }: ThemeType) => css`
     background: ${theme.colors.neutralGray300};
 
-    padding: ${theme.space[20]} 0;
+    padding: 110px 0;
 
     display: flex;
     align-items: center;
@@ -24,9 +24,9 @@ export const Container = styled.div`
 `;
 
 export const ImageCard = styled(Card)`
-  width: 570px;
-  min-width: 570px;
-  height: 720px;
+  width: 420px;
+  min-width: 420px;
+  height: 580px;
 
   background-image: ${`url(${image1.src})`};
   background-size: cover;
@@ -48,9 +48,9 @@ export const FreeCard = styled(Card)`
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 
     margin-right: -54px;
-    padding: ${theme.space[10]} ${theme.space[20]};
+    padding: ${theme.space[20]} ${theme.space[20]};
 
-    gap: ${theme.space[2]};
+    gap: ${theme.space[10]};
     display: flex;
     flex-direction: column;
     align-items: center;

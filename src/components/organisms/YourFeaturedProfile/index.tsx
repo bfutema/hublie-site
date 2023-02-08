@@ -21,13 +21,13 @@ export const YourFeaturedProfileSection: React.FC<
         <ImageCard />
 
         <Info>
-          <Text size="5xl">
+          <Text color="primary800" size="5xl">
             Seu perfil<strong>em destaque</strong> para
             <br />
             <strong>milhares de recrutadores</strong>
           </Text>
 
-          <Text size="xl" weight="minRegular">
+          <Text color="neutralGray700" size="xl" weight="minRegular">
             Tudo em uma plataforma colaborativa, com base em suas expeciências,
             recomendações e desafios diários
           </Text>
@@ -42,7 +42,12 @@ export const YourFeaturedProfileSection: React.FC<
                 }}
               />
 
-              <Text size="xl" weight="minRegular" maxWidth="416px">
+              <Text
+                color="neutralGray700"
+                size="xl"
+                weight="minRegular"
+                maxWidth="416px"
+              >
                 O match perfeito com empresas que têm tudo a ver com você
               </Text>
             </InfoItem>
@@ -56,7 +61,12 @@ export const YourFeaturedProfileSection: React.FC<
                 }}
               />
 
-              <Text size="xl" weight="minRegular" maxWidth="416px">
+              <Text
+                color="neutralGray700"
+                size="xl"
+                weight="minRegular"
+                maxWidth="416px"
+              >
                 Apareça no ranking entre os melhores profissionais da sua área
               </Text>
             </InfoItem>
@@ -70,7 +80,12 @@ export const YourFeaturedProfileSection: React.FC<
                 }}
               />
 
-              <Text size="xl" weight="minRegular" maxWidth="416px">
+              <Text
+                color="neutralGray700"
+                size="xl"
+                weight="minRegular"
+                maxWidth="416px"
+              >
                 Evolua na carreira, ganhe pontos e troque por prêmios exclusivos
               </Text>
             </InfoItem>

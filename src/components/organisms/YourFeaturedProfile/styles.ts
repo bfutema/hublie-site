@@ -8,7 +8,7 @@ export const Container = styled.div`
   ${({ theme }: ThemeType) => css`
     background: ${theme.colors.white};
 
-    padding: ${theme.space[20]} 0;
+    padding: 110px 0;
 
     display: flex;
     align-items: flex-start;
@@ -25,9 +25,9 @@ export const Container = styled.div`
 `;
 
 export const ImageCard = styled(Card)`
-  width: 570px;
-  min-width: 570px;
-  height: 720px;
+  width: 470px;
+  min-width: 470px;
+  height: 628px;
 
   background-image: ${`url(${image1.src})`};
   background-size: cover;
@@ -45,7 +45,7 @@ export const ImageCard = styled(Card)`
 
 export const Info = styled.div`
   ${({ theme }: ThemeType) => css`
-    padding: ${theme.space[10]} ${theme.space[10]};
+    padding: ${theme.space[10]} ${theme.space[16]};
 
     gap: ${theme.space[2]};
     display: flex;
@@ -58,6 +58,7 @@ export const Info = styled.div`
     strong {
       color: ${theme.colors.secondary500};
       font-weight: ${theme.fontWeights.bold};
+      text-decoration: underline;
 
       margin-left: 8px;
     }

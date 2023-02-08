@@ -6,11 +6,12 @@ import { ThemeType } from '@/interfaces/Theme';
 export const Container = styled.div`
   ${({ theme }: ThemeType) => css`
     width: 100%;
-    height: 410px;
+    height: 510px;
 
     background-size: cover;
+    background-position: center;
 
-    padding: ${theme.space[20]};
+    padding: ${theme.space[40]} ${theme.space[40]};
 
     display: flex;
     align-items: center;
@@ -18,6 +19,7 @@ export const Container = styled.div`
 
     strong {
       color: ${theme.colors.pink500};
+      text-decoration: underline;
     }
 
     @media (max-width: 768px) {

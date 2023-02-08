@@ -12,7 +12,6 @@ import { ContainerWrapper } from '@/components/quarks/ContainerWrapper';
 
 import {
   Container,
-  Title,
   Carousel,
   Navigation,
   NextButton,
@@ -35,12 +34,24 @@ export const WhyBePartOfHublieSection: React.FC<
   return (
     <Container>
       <ContainerWrapper>
-        <Title color="white" size="4xl">
-          Por que fazer parte da Hublie
-        </Title>
+        <Navigation>
+          <Text color="white" size="2xl">
+            Por que fazer parte da Hublie
+          </Text>
 
-        <Carousel>
-          <Navigation>
+          <div>
+            <PrevButton
+              type="button"
+              onClick={() => {
+                imagesRef.current?.scrollTo({ behavior: 'smooth', left: 0 });
+
+                setCurrentImage(1);
+              }}
+              disabled={currentImage === 1}
+            >
+              <FiArrowLeft size={32} />
+            </PrevButton>
+
             <NextButton
               type="button"
               onClick={() => {
@@ -53,29 +64,19 @@ export const WhyBePartOfHublieSection: React.FC<
             >
               <FiArrowRight size={32} />
             </NextButton>
+          </div>
+        </Navigation>
 
-            <PrevButton
-              type="button"
-              onClick={() => {
-                imagesRef.current?.scrollTo({ behavior: 'smooth', left: 0 });
-
-                setCurrentImage(1);
-              }}
-              disabled={currentImage === 1}
-            >
-              <FiArrowLeft size={32} />
-            </PrevButton>
-          </Navigation>
-
+        <Carousel>
           <Images ref={imagesRef}>
             <WhyCard>
               <Image src={faceId} alt="" width={60} height={60} />
 
-              <Text weight="bold">
+              <Text color="primary800" weight="bold">
                 <p>Assistente virtual</p>
               </Text>
 
-              <Text>
+              <Text color="neutralGray700">
                 <p>
                   Acompanhamento diário de assistente virtual com inteligência
                   artificial para encontrar as vagas certas para você
@@ -86,11 +87,11 @@ export const WhyBePartOfHublieSection: React.FC<
             <WhyCard>
               <Image src={announcement} alt="" width={60} height={60} />
 
-              <Text weight="bold">
+              <Text color="primary800" weight="bold">
                 <p>O que falam sobre a empresa</p>
               </Text>
 
-              <Text>
+              <Text color="neutralGray700">
                 <p>
                   Descubra o que os colaboradores falam sobre a empresa para a
                   qual você está se candidatando
@@ -101,11 +102,11 @@ export const WhyBePartOfHublieSection: React.FC<
             <WhyCard>
               <Image src={clipboard} alt="" width={60} height={60} />
 
-              <Text weight="bold">
+              <Text color="primary800" weight="bold">
                 <p>Currículo</p>
               </Text>
 
-              <Text>
+              <Text color="neutralGray700">
                 <p>
                   Compare o seu currículo com o de outras pessoas do mesmo
                   perfil e saiba quais são as suas chances de ser contratado
@@ -116,11 +117,11 @@ export const WhyBePartOfHublieSection: React.FC<
             <WhyCard>
               <Image src={coins} alt="" width={60} height={60} />
 
-              <Text weight="bold">
+              <Text color="primary800" weight="bold">
                 <p>Salário</p>
               </Text>
 
-              <Text>
+              <Text color="neutralGray700">
                 <p>
                   Confira se o seu salário está de acordo com a sua experiência
                   e veja até onde você pode chegar

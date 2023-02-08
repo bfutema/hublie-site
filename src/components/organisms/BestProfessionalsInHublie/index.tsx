@@ -17,8 +17,8 @@ export const BestProfessionalsInHublie: React.FC<
   return (
     <Container style={{ backgroundImage: `url(${image.src})` }}>
       <ContainerWrapper>
-        <Text color="white" size="5xl">
-          Os <strong> melhores profissionais </strong> estão na <br /> Hublie!
+        <Text color="white" size="5xl" maxWidth="420px">
+          Os <strong> melhores profissionais </strong> <br /> estão na Hublie!
         </Text>
 
         <CallToActionCard>
