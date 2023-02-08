@@ -15,9 +15,25 @@ export const Container = styled.div`
     flex-direction: column;
 
     @media (max-width: 768px) {
-      padding: ${theme.space[4]};
+      padding: ${theme.space[6]};
 
       gap: ${theme.space[4]};
+    }
+  `}
+`;
+
+export const Header = styled.div`
+  ${({ theme }: ThemeType) => css`
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      margin: ${theme.space[4]} auto ${theme.space[2]} auto;
+
+      flex-direction: column;
+      gap: ${theme.space[4]};
+
+      text-align: center;
     }
   `}
 `;
@@ -25,6 +41,7 @@ export const Container = styled.div`
 export const Title = styled(Text)`
   ${({ theme }: ThemeType) => css`
     margin-bottom: 0px;
+    font-weight: ${theme.fontWeights.bold};
 
     strong {
       color: ${theme.colors.secondary500};
@@ -33,6 +50,7 @@ export const Title = styled(Text)`
 
     @media (max-width: 768px) {
       margin: 0 auto;
+      padding: 0 ${theme.space[6]};
 
       font-size: ${theme.fontSizes['2xl']};
       text-align: center;
@@ -58,10 +76,9 @@ export const Navigation = styled.div`
 
     padding: ${theme.space[4]} ${theme.space[10]} ${theme.space[4]} 0;
 
-    gap: ${theme.space[8]};
+    gap: ${theme.space[4]};
     display: flex;
     justify-content: center;
-    flex-direction: column;
 
     @media (max-width: 768px) {
       margin: 0 auto;
@@ -169,17 +186,18 @@ export const Images = styled.div`
 
   @media (max-width: 768px) {
     display: flex;
-    gap: 8px;
+    gap: 24px;
   }
 `;
 
 export const WhyCard = styled(Card)`
   ${({ theme }: ThemeType) => css`
-    min-width: 350px;
+    min-width: 300px;
+    /* height: 280px; */
 
-    padding: ${theme.space[4]};
+    padding: ${theme.space[8]};
 
-    gap: ${theme.space[2]};
+    gap: ${theme.space[3]};
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -187,10 +205,20 @@ export const WhyCard = styled(Card)`
 
     > div:nth-of-type(1) {
       margin-top: 8px;
+      padding: 0px ${theme.space[8]};
+      line-height: ${theme.lineHeights.short};
     }
 
     p {
       text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      min-width: 356px;
+
+      > div:nth-of-type(1) {
+        padding: 0px ${theme.space[4]};
+      }
     }
   `}
 `;

@@ -19,6 +19,7 @@ import {
   PrevButton,
   Images,
   WhyCard,
+  Header,
 } from './styles';
 
 interface SolutionsForYourCompanyProps {
@@ -35,12 +36,24 @@ export const SolutionsForYourCompany: React.FC<
   return (
     <Container>
       <ContainerWrapper>
-        <Title color="white" size="4xl">
-          Soluções Para Sua Empresa
-        </Title>
+        <Header>
+          <Title color="white" size="4xl">
+            Soluções para a sua empresa
+          </Title>
 
-        <Carousel>
           <Navigation>
+            <PrevButton
+              type="button"
+              onClick={() => {
+                imagesRef.current?.scrollTo({ behavior: 'smooth', left: 0 });
+
+                setCurrentImage(1);
+              }}
+              disabled={currentImage === 1}
+            >
+              <FiArrowLeft size={32} />
+            </PrevButton>
+
             <NextButton
               type="button"
               onClick={() => {
@@ -53,20 +66,10 @@ export const SolutionsForYourCompany: React.FC<
             >
               <FiArrowRight size={32} />
             </NextButton>
-
-            <PrevButton
-              type="button"
-              onClick={() => {
-                imagesRef.current?.scrollTo({ behavior: 'smooth', left: 0 });
-
-                setCurrentImage(1);
-              }}
-              disabled={currentImage === 1}
-            >
-              <FiArrowLeft size={32} />
-            </PrevButton>
           </Navigation>
+        </Header>
 
+        <Carousel>
           <Images ref={imagesRef}>
             <WhyCard>
               <Image src={edit} alt="" width={60} height={60} />
@@ -75,7 +78,7 @@ export const SolutionsForYourCompany: React.FC<
                 <p>Recrutamento e Seleção Ágil</p>
               </Text>
 
-              <Text>
+              <Text color="neutralGray700">
                 <p>
                   Divulgue suas vagas gratuitamente, acesse os melhores talentos
                   por área e acelere suas contratações
@@ -90,7 +93,7 @@ export const SolutionsForYourCompany: React.FC<
                 <p>Plataforma ATS</p>
               </Text>
 
-              <Text>
+              <Text color="neutralGray700">
                 <p>
                   Automatize seu processo de Recrutamento e Seleção de forma
                   simples e personalizada e de graça!
@@ -105,7 +108,7 @@ export const SolutionsForYourCompany: React.FC<
                 <p>Hunting Ativo</p>
               </Text>
 
-              <Text>
+              <Text color="neutralGray700">
                 <p>
                   Nossos HeadHunters encontram candidatos com as competências
                   técnicas e comportamentais que você precisa
@@ -120,7 +123,7 @@ export const SolutionsForYourCompany: React.FC<
                 <p>Smartsourcing</p>
               </Text>
 
-              <Text>
+              <Text color="neutralGray700">
                 <p>
                   Montamos o time que você precisa e alocamos squads na sua
                   empresa com profissionais altamente qualificados
