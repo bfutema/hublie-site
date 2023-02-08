@@ -18,8 +18,10 @@ export const JoinMoreRecruitersAndHeadHunters: React.FC<
     <Container style={{ backgroundImage: `url(${image.src})` }}>
       <ContainerWrapper>
         <Text color="white" size="5xl">
-          Junte-se <strong> a mais de X recrutadores </strong> e{' '}
-          <strong> HeadHunters </strong> de todo o Brasil
+          <p>
+            Junte-se <strong> a mais de X recrutadores </strong> e{' '}
+            <strong> HeadHunters </strong> de todo o Brasil
+          </p>
         </Text>
 
         <CallToActionCard>

@@ -81,8 +81,9 @@ export const Images = styled.div`
   z-index: 1;
 
   @media (max-width: 768px) {
-    display: flex;
     gap: 8px;
+    display: flex;
+    flex-direction: column;
   }
 `;
 

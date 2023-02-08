@@ -65,6 +65,10 @@ export const CardItem = styled.div`
 
     @media (max-width: 768px) {
       padding: ${theme.space[6]} 0;
+
+      & + div {
+        border: none;
+      }
     }
   `}
 `;

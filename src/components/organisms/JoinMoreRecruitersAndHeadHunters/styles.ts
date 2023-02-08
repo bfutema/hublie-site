@@ -29,9 +29,9 @@ export const Container = styled.div`
       flex-direction: column;
 
       > div:nth-of-type(1) {
-        font-size: ${theme.fontSizes['2xl']};
         text-align: center;
 
+        p,
         strong {
           font-size: ${theme.fontSizes['2xl']};
         }

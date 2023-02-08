@@ -65,6 +65,7 @@ export const Info = styled.div`
 
     @media (max-width: 768px) {
       margin-top: -750px;
+      padding: ${theme.space[10]} ${theme.space[8]};
 
       > div:nth-of-type(1) {
         font-size: 1.6rem;

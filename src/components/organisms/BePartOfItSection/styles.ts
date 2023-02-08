@@ -65,7 +65,9 @@ export const FreeCard = styled(Card)`
 
     @media (max-width: 768px) {
       margin-top: -100px;
-      margin-right: 0;
+      margin-left: 0;
+
+      text-align: center;
 
       padding: ${theme.space[8]} ${theme.space[7]};
 

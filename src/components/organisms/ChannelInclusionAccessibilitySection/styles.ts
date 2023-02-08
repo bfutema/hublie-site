@@ -43,6 +43,9 @@ export const ImageCard = styled.div`
     height: 100vw;
     min-height: 100vw;
     max-height: 100vw;
+
+    margin-left: 0;
+    margin-right: 0 !important;
   }
 `;
 

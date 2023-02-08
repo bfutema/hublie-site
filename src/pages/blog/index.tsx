@@ -18,7 +18,6 @@ const Blog: NextPage = () => {
 
       <main>
         <Header />
-        <h1>Blog</h1>
         <Footer />
       </main>
     </>
