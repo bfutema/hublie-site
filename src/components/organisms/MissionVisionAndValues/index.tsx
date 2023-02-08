@@ -20,11 +20,11 @@ export const MissionVisionAndValuesSection: React.FC<
       <ContainerWrapper>
         <Section>
           <FreeCard>
-            <Text color="primary800" size="5xl">
+            <Text color="pink500" size="5xl">
               Missão
             </Text>
 
-            <Text color="primary800" size="lg" weight="minRegular">
+            <Text color="neutralGray700" size="lg" weight="minRegular">
               Conectar pessoas e empresas de forma inteligente para um mercado
               de trabalho mais transparente, inclusivo e humanizado.
             </Text>
@@ -35,27 +35,33 @@ export const MissionVisionAndValuesSection: React.FC<
 
         <Section>
           <FreeCard>
-            <Text color="primary800" size="5xl">
+            <Text color="pink500" size="5xl">
               Visão
             </Text>
 
-            <Text color="primary800" size="lg" weight="minRegular">
+            <Text color="neutralGray700" size="lg" weight="minRegular">
               Ser a maior empresa de geração de emprego do mundo, inspirando
               pessoas e organizações para um mercado de trabalho mais
               colaborativo, transparente, inovador e humanizado.
             </Text>
           </FreeCard>
 
-          <ImageCard style={{ backgroundImage: `url(${image2.src})` }} />
+          <ImageCard
+            style={{
+              backgroundImage: `url(${image2.src})`,
+              order: -1,
+              marginRight: '-54px',
+            }}
+          />
         </Section>
 
         <Section>
           <FreeCard>
-            <Text color="primary800" size="5xl">
+            <Text color="pink500" size="5xl">
               Valores
             </Text>
 
-            <Text color="primary800" size="lg" weight="minRegular">
+            <Text color="neutralGray700" size="lg" weight="minRegular">
               Integridade e humanização em primeiro lugar Inovação e
               criatividade para prosperar nos desafios do novo mundo Ética e
               Transparência inegociáveis Respeito para todos, dentro e fora da

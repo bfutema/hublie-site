@@ -5,7 +5,7 @@ import { ThemeType } from '@/interfaces/Theme';
 
 export const Container = styled.div`
   ${({ theme }: ThemeType) => css`
-    background: ${theme.colors.white};
+    background: ${theme.colors.neutralGray300};
 
     padding: ${theme.space[20]} ${theme.space[16]};
 
@@ -34,6 +34,8 @@ export const ImageCard = styled.div`
   background-position: center;
   background-repeat: no-repeat;
 
+  margin-left: -54px;
+
   @media (max-width: 768px) {
     width: 86vw;
     min-width: 86vw;
@@ -47,20 +49,18 @@ export const ImageCard = styled.div`
 export const FreeCard = styled(Card)`
   ${({ theme }: ThemeType) => css`
     max-height: max-content;
+    max-width: 460px;
 
     background: ${theme.colors.white};
     box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.2);
 
-    text-align: center;
-
-    margin-right: -54px;
-    padding: ${theme.space[10]} ${theme.space[20]};
+    padding: ${theme.space[20]} ${theme.space[8]};
 
     flex-flow: 0;
     gap: ${theme.space[2]};
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 
     z-index: 100;

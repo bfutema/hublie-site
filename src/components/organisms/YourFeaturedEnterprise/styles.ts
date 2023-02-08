@@ -6,13 +6,18 @@ import { ThemeType } from '@/interfaces/Theme';
 
 export const Container = styled.div`
   ${({ theme }: ThemeType) => css`
-    background: ${theme.colors.neutralGray300};
+    background: ${theme.colors.white};
 
-    padding: 120px 148px;
+    text-align: center;
 
-    gap: ${theme.space[10]};
+    padding: 80px 148px 120px 148px;
+
+    position: relative;
+
+    gap: ${theme.space[16]};
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     @media (max-width: 768px) {
       padding: ${theme.space[4]};
@@ -22,6 +27,22 @@ export const Container = styled.div`
   `}
 `;
 
+export const GrayBackground = styled.div`
+  ${({ theme }: ThemeType) =>
+    css`
+      height: 430px;
+
+      background: ${theme.colors.neutralGray300};
+
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      z-index: 0;
+    `}
+`;
+
 export const Title = styled(Text)`
   ${({ theme }: ThemeType) => css`
     margin-bottom: -32px;
@@ -29,6 +50,7 @@ export const Title = styled(Text)`
     strong {
       color: ${theme.colors.secondary500};
       font-weight: ${theme.fontWeights.bold};
+      text-decoration: underline;
     }
 
     @media (max-width: 768px) {
@@ -52,120 +74,11 @@ export const Carousel = styled.div`
   }
 `;
 
-export const Navigation = styled.div`
-  ${({ theme }) => css`
-    width: fit-content;
-
-    padding: ${theme.space[4]} ${theme.space[10]} ${theme.space[4]} 0;
-
-    gap: ${theme.space[8]};
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    @media (max-width: 768px) {
-      margin: 0 auto;
-
-      padding: ${theme.space[4]} 0;
-
-      gap: ${theme.space[2]};
-      flex-direction: row;
-      justify-content: center;
-    }
-  `}
-`;
-
-export const NextButton = styled.button`
-  ${({ theme }: ThemeType) => css`
-    width: 100px;
-    height: 50px;
-
-    border: 1px solid ${theme.colors.secondary500};
-    border-radius: ${theme.radii.full};
-    background: ${theme.colors.secondary500};
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: all 0.2s;
-
-    &:disabled {
-      opacity: 0.2;
-    }
-
-    &:not(:disabled):hover {
-      filter: brightness(0.9);
-    }
-
-    svg {
-      margin-left: ${theme.space[4]};
-
-      line,
-      polyline {
-        stroke: ${theme.colors.white};
-      }
-    }
-
-    @media (max-width: 768px) {
-      width: 70px;
-      height: 40px;
-
-      order: 2;
-    }
-  `}
-`;
-
-export const PrevButton = styled.button`
-  ${({ theme }: ThemeType) => css`
-    width: 100px;
-    height: 50px;
-
-    border: 1px solid ${theme.colors.secondary500};
-    border-radius: ${theme.radii.full};
-    background: ${theme.colors.secondary500};
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: all 0.2s;
-
-    &:disabled {
-      opacity: 0.2;
-    }
-
-    &:not(:disabled):hover {
-      filter: brightness(0.9);
-    }
-
-    svg {
-      margin-right: ${theme.space[4]};
-
-      line,
-      polyline {
-        stroke: ${theme.colors.white};
-      }
-    }
-
-    @media (max-width: 768px) {
-      width: 70px;
-      height: 40px;
-
-      order: 1;
-    }
-  `}
-`;
-
 export const Images = styled.div`
-  overflow-x: scroll;
-
-  gap: 24px;
+  gap: 16px;
   display: flex;
 
-  &::-webkit-scrollbar {
-    height: 0px;
-  }
+  z-index: 1;
 
   @media (max-width: 768px) {
     display: flex;
@@ -177,7 +90,9 @@ export const WhyCard = styled(Card)`
   ${({ theme }: ThemeType) => css`
     min-width: 350px;
 
-    padding: ${theme.space[4]};
+    box-shadow: 0 0 10px 2px rgba(24, 92, 255, 0.08);
+
+    padding: ${theme.space[16]} ${theme.space[12]};
 
     gap: ${theme.space[2]};
     display: flex;

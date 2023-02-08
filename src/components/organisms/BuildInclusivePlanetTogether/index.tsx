@@ -16,18 +16,18 @@ export const BuildInclusivePlanetTogether: React.FC<
   return (
     <Container>
       <ContainerWrapper>
+        <ImageCard />
+
         <FreeCard>
-          <Text size="5xl">
+          <Text color="primary800" size="5xl">
             Vamos juntos construir um planeta mais inclusivo, transparente e
             humanizado!
           </Text>
 
-          <ButtonLink backgroundColor="primary800" href="/">
+          <ButtonLink backgroundColor="primary500" href="/">
             ACESSE NOSSA PLATAFORMA
           </ButtonLink>
         </FreeCard>
-
-        <ImageCard />
       </ContainerWrapper>
     </Container>
   );

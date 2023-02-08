@@ -19,6 +19,8 @@ export const Container = styled.div<ContainerProps>`
     padding: ${theme.space[4]} ${theme.space[6]};
     font-weight: ${theme.fontWeights.bold};
 
+    z-index: 1;
+
     div {
       font-weight: ${theme.fontWeights.bold};
     }

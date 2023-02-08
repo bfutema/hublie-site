@@ -20,40 +20,40 @@ export const WhatYouFindAtHublie: React.FC<WhatYouFindAtHublieProps> = () => {
 
         <InfoCard>
           <CardItem>
-            <Text color="secondary500" size="4xl">
+            <Text color="secondary500" size="7xl" weight="medium">
               <b>+</b>
               220
             </Text>
 
-            <Text color="primary800" weight="minRegular">
+            <Text color="primary800" weight="minRegular" maxWidth="200px">
               Candidatos Qualificados
             </Text>
           </CardItem>
 
           <CardItem>
-            <Text color="secondary500" size="4xl">
+            <Text color="secondary500" size="7xl" weight="medium">
               <b>+</b>
               220
             </Text>
 
-            <Text color="primary800" weight="minRegular">
+            <Text color="primary800" weight="minRegular" maxWidth="200px">
               Mil Recomendações
             </Text>
           </CardItem>
 
           <CardItem>
-            <Text color="secondary500" size="4xl">
+            <Text color="secondary500" size="7xl" weight="medium">
               <b>+</b>
               220
             </Text>
 
-            <Text color="primary800" weight="minRegular">
+            <Text color="primary800" weight="minRegular" maxWidth="200px">
               Empresas contratando com a Hublie
             </Text>
           </CardItem>
         </InfoCard>
 
-        <ButtonLink href="/">FALE COM NOSSOS ESPECIALISTAS</ButtonLink>
+        <ButtonLink href="/">Fale com nossos expecialistas</ButtonLink>
       </ContainerWrapper>
     </Container>
   );

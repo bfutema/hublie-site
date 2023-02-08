@@ -49,15 +49,13 @@ export const FreeCard = styled(Card)`
     background: ${theme.colors.white};
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 
-    text-align: center;
-
-    margin-right: -54px;
+    margin-left: -54px;
     padding: ${theme.space[10]} ${theme.space[20]};
 
-    gap: ${theme.space[2]};
+    gap: ${theme.space[8]};
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 
     z-index: 100;

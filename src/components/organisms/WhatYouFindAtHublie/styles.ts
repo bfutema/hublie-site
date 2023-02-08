@@ -24,10 +24,13 @@ export const Container = styled.div`
 
 export const InfoCard = styled(Card)`
   ${({ theme }: ThemeType) => css`
-    padding: 0 ${theme.space[8]};
+    padding: ${theme.space[4]} 0;
 
-    gap: ${theme.space[8]};
     display: flex;
+
+    > div:nth-of-type(2) {
+      padding: ${theme.space[4]} ${theme.space[16]};
+    }
 
     @media (max-width: 768px) {
       gap: 0;
@@ -38,12 +41,23 @@ export const InfoCard = styled(Card)`
 
 export const CardItem = styled.div`
   ${({ theme }: ThemeType) => css`
-    padding: ${theme.space[12]} 0;
+    text-align: center;
 
+    padding: ${theme.space[4]} ${theme.space[12]};
+
+    align-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    & + div {
+      border-left: 1px solid #7c808c;
+    }
+
+    > div:nth-of-type(2) {
+      height: 40px;
+    }
 
     b {
       opacity: 0.5;

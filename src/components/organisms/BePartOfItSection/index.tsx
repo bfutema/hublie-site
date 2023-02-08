@@ -14,8 +14,10 @@ export const BePartOfItSection: React.FC<BePartOfItSectionProps> = () => {
   return (
     <Container>
       <ContainerWrapper>
+        <ImageCard />
+
         <FreeCard>
-          <Text size="5xl">
+          <Text color="primary800" size="5xl" weight="bold">
             Faça parte da maior comunidade de talentos e empresas do Brasil
           </Text>
 
@@ -23,8 +25,6 @@ export const BePartOfItSection: React.FC<BePartOfItSectionProps> = () => {
             ACESSE NOSSA PLATAFORMA
           </ButtonLink>
         </FreeCard>
-
-        <ImageCard />
       </ContainerWrapper>
     </Container>
   );

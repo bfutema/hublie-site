@@ -19,7 +19,6 @@ import {
   PrevButton,
   Images,
   WhyCard,
-  Header,
 } from './styles';
 
 interface SolutionsForYourCompanyProps {
@@ -36,12 +35,12 @@ export const SolutionsForYourCompany: React.FC<
   return (
     <Container>
       <ContainerWrapper>
-        <Header>
-          <Title color="white" size="4xl">
-            Soluções para a sua empresa
+        <Navigation>
+          <Title color="white" size="2xl">
+            Soluções Para Sua Empresa
           </Title>
 
-          <Navigation>
+          <div>
             <PrevButton
               type="button"
               onClick={() => {
@@ -66,8 +65,8 @@ export const SolutionsForYourCompany: React.FC<
             >
               <FiArrowRight size={32} />
             </NextButton>
-          </Navigation>
-        </Header>
+          </div>
+        </Navigation>
 
         <Carousel>
           <Images ref={imagesRef}>

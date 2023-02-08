@@ -33,7 +33,7 @@ export const CandidatesHeroSection: React.FC<
           </p>
         </Text>
 
-        <ButtonLink href="/">FAÇA PARTE GRATUITAMENTE</ButtonLink>
+        <ButtonLink href="/">Faça parte gratuitamente</ButtonLink>
       </ContainerWrapper>
     </Container>
   );

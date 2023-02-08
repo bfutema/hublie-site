@@ -20,11 +20,11 @@ export const ChannelInclusionAccessibilitySection: React.FC<
       <ContainerWrapper>
         <Section>
           <FreeCard>
-            <Text color="primary800" size="5xl">
+            <Text color="green300" size="5xl">
               Canal de Denúncia e Proteção à Mulher
             </Text>
 
-            <Text color="primary800" size="lg" weight="minRegular">
+            <Text color="neutralGray700" size="md" weight="minRegular">
               Canal de Denúncia e Proteção à Mulher: entendemos que,
               infelizmente, ainda vivemos em um mundo desigual para as mulheres,
               e para combater o assédio e outros tipos de violência e garantir o
@@ -39,11 +39,11 @@ export const ChannelInclusionAccessibilitySection: React.FC<
 
         <Section>
           <FreeCard>
-            <Text color="primary800" size="5xl">
+            <Text color="green300" size="5xl">
               Inclusão Social
             </Text>
 
-            <Text color="primary800" size="lg" weight="minRegular">
+            <Text color="neutralGray700" size="md" weight="minRegular">
               Grupos minoritários vêm sofrendo injustiças sociais há séculos, e
               para gerar oportunidades para quem vive sob estigmas na sociedade,
               criamos grupos e ações dedicadas às comunidades LGBTQIAP+, negros,
@@ -52,16 +52,22 @@ export const ChannelInclusionAccessibilitySection: React.FC<
             </Text>
           </FreeCard>
 
-          <ImageCard style={{ backgroundImage: `url(${image2.src})` }} />
+          <ImageCard
+            style={{
+              backgroundImage: `url(${image2.src})`,
+              order: -1,
+              marginRight: '-54px',
+            }}
+          />
         </Section>
 
         <Section>
           <FreeCard>
-            <Text color="primary800" size="5xl">
+            <Text color="green300" size="5xl">
               Acessibilidade
             </Text>
 
-            <Text color="primary800" size="lg" weight="minRegular">
+            <Text color="neutralGray700" size="md" weight="minRegular">
               Para garantir que todas as pessoas aproveitem todas as
               funcionalidades da Hublie, projetamos nossa plataforma de modo que
               todas as pessoas consigam entender, navegar e interagir com as

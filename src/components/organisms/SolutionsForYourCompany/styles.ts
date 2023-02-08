@@ -8,7 +8,7 @@ export const Container = styled.div`
   ${({ theme }: ThemeType) => css`
     background: ${theme.colors.secondary500};
 
-    padding: 120px 148px;
+    padding: 80px 148px 120px 148px;
 
     gap: ${theme.space[10]};
     display: flex;
@@ -72,13 +72,18 @@ export const Carousel = styled.div`
 
 export const Navigation = styled.div`
   ${({ theme }) => css`
-    width: fit-content;
+    width: 100%;
 
-    padding: ${theme.space[4]} ${theme.space[10]} ${theme.space[4]} 0;
+    padding: ${theme.space[4]} ${theme.space[10]} ${theme.space[12]} 0;
 
     gap: ${theme.space[4]};
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+
+    > div {
+      gap: ${theme.space[4]};
+      display: flex;
+    }
 
     @media (max-width: 768px) {
       margin: 0 auto;
@@ -192,10 +197,16 @@ export const Images = styled.div`
 
 export const WhyCard = styled(Card)`
   ${({ theme }: ThemeType) => css`
+<<<<<<< HEAD
     min-width: 300px;
     /* height: 280px; */
 
     padding: ${theme.space[8]};
+=======
+    min-width: 320px;
+
+    padding: ${theme.space[10]} ${theme.space[8]};
+>>>>>>> cbb503f (refactor: :recycle: finish adjusts)
 
     gap: ${theme.space[3]};
     display: flex;

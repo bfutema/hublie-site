@@ -4,7 +4,7 @@ import { ThemeType } from '@/interfaces/Theme';
 
 export const Container = styled.div`
   ${({ theme }: ThemeType) => css`
-    height: 882px;
+    height: 786px;
 
     background: ${theme.colors.primary800};
 
