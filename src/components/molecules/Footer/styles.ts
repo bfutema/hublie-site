@@ -76,8 +76,14 @@ export const Info = styled.div`
   width: 100%;
 
   display: flex;
-  align-items: flex-end;
   justify-content: space-between;
+
+  > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+  }
 
   @media (max-width: 768px) {
     margin-bottom: 64px;
@@ -89,5 +95,14 @@ export const Info = styled.div`
     div div {
       max-width: 100%;
     }
+
+    > div:nth-child(1) {
+      gap: 16px;
+    }
   }
+`;
+
+export const Logos = styled.div`
+  display: flex;
+  gap: 16px;
 `;
