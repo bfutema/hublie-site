@@ -38,7 +38,7 @@
           "PascalCase"
         ],
         "custom": {
-          "regex": "(^[A-Z])*(Props|Response|Params|Request|Type|Context$)",
+          "regex": "(^[A-Z])*(Props|Response|Params|Request|Type|Context|Ref$)",
           "match": true
         }
       },
@@ -48,7 +48,7 @@
           "PascalCase"
         ],
         "custom": {
-          "regex": "(^[A-Z])*(Props|Response|Params|Request|Type|Context$)",
+          "regex": "(^[A-Z])*(Props|Response|Params|Request|Type|Context|Ref$)",
           "match": true
         }
       }

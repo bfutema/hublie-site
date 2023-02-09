@@ -52,7 +52,7 @@ export default class MyDocument extends Document {
           />
         </Head>
 
-        <body>
+        <body id="body">
           <Main />
 
           <NextScript />

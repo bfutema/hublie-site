@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 
+import { Text } from '@/components/atoms/Text';
 import { ThemeType } from '@/interfaces/Theme';
 
 export const Container = styled.div`
@@ -28,14 +29,19 @@ export const Heading = styled.div`
       gap: ${theme.space[6]};
       display: flex;
 
-      li {
+      li,
+      button {
+        border: none;
+        background: none;
+
         color: ${theme.colors.white};
         font-size: ${theme.fontSizes.sm};
 
         transition: all 0.2s;
 
         &:hover {
-          a {
+          a,
+          button {
             color: ${theme.colors.secondary500};
             text-decoration: underline;
           }
@@ -103,6 +109,110 @@ export const Info = styled.div`
 `;
 
 export const Logos = styled.div`
-  display: flex;
   gap: 16px;
+  display: flex;
+
+  img {
+    cursor: pointer;
+
+    transition: all 0.2s;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+`;
+
+export const TermsOfUseModalContent = styled.div`
+  ${({ theme }: ThemeType) => css`
+    max-width: 80vw;
+    max-height: 80vh;
+
+    padding-right: ${theme.space[4]};
+
+    gap: ${theme.space[4]};
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+
+      border-radius: ${theme.radii.full};
+      background: ${theme.colors.black};
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: ${theme.radii.full};
+      background: ${theme.colors.primary500};
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: ${theme.radii.full};
+      background: ${theme.colors.neutralGray300};
+    }
+  `}
+`;
+
+export const TermsOfUseTitle = styled(Text)`
+  ${({ theme }: ThemeType) => css`
+    margin-bottom: ${theme.space[4]};
+  `}
+`;
+
+export const TermsOfUseSubtitle = styled(Text)`
+  ${({ theme }: ThemeType) => css`
+    margin-bottom: ${theme.space[4]};
+  `}
+`;
+
+export const TermsOfUseSectionItem = styled(Text)`
+  ${({ theme }: ThemeType) => css`
+    padding-left: ${theme.space[8]};
+
+    b {
+      font-weight: ${theme.fontWeights.bold};
+    }
+
+    u {
+      color: ${theme.colors.primary500};
+    }
+
+    ins {
+      color: ${theme.colors.primary500};
+      text-decoration: none;
+    }
+
+    h2 {
+      padding-bottom: ${theme.space[2]};
+
+      font-weight: ${theme.fontWeights.bold};
+
+      span {
+        font-weight: ${theme.fontWeights.bold};
+
+        margin-left: 16px;
+
+        display: inline-block;
+      }
+    }
+
+    p {
+      padding-left: ${theme.space[16]};
+
+      text-align: justify;
+
+      & + p {
+        margin-top: ${theme.space[4]};
+      }
+
+      span {
+        margin-right: 16px;
+
+        display: inline-block;
+      }
+    }
+  `}
 `;

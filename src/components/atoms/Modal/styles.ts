@@ -1,0 +1,60 @@
+import styled, { css } from 'styled-components';
+
+import { ThemeType } from '@/interfaces/Theme';
+
+interface ContainerProps {
+  isOpen: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
+  ${({ isOpen }: ContainerProps) => css`
+    background: rgba(0, 0, 0, 0.2);
+
+    opacity: ${isOpen ? 1 : 0};
+    visibility: ${isOpen ? 'visible' : 'hidden'};
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    transition: all 0.2s;
+
+    z-index: 10000;
+  `}
+`;
+
+interface DialogProps extends ThemeType {
+  isOpen: boolean;
+}
+
+export const Dialog = styled.div<DialogProps>`
+  ${({ theme, isOpen }: DialogProps) => css`
+    border-radius: ${theme.radii.md};
+    background: ${theme.colors.white};
+
+    padding: ${theme.space[4]};
+
+    display: ${isOpen ? 'block' : 'none'};
+
+    animation: 0.2s ease-out 0s 1 normal none running fadeIn;
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20%) scale(0.96);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+  `}
+`;
