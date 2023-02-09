@@ -1,4 +1,5 @@
 import React, { useRef, useState, useImperativeHandle } from 'react';
+import { FiX } from 'react-icons/fi';
 
 import { useClickAway } from '@/hooks/useClickAway';
 
@@ -54,6 +55,19 @@ const Modal: React.ForwardRefRenderFunction<ModalRef, ModalProps> = (
     <Container isOpen={isOpen}>
       <Dialog ref={dialogRef} isOpen={isOpen}>
         {children}
+
+        <button
+          type="button"
+          onClick={() => {
+            const main = document.getElementById('body');
+
+            if (main) main.style.overflow = 'initial';
+
+            setIsOpen(false);
+          }}
+        >
+          <FiX size={24} />
+        </button>
       </Dialog>
     </Container>
   );

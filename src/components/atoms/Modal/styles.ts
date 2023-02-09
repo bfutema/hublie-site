@@ -42,9 +42,39 @@ export const Dialog = styled.div<DialogProps>`
 
     padding: ${theme.space[4]};
 
+    position: relative;
+
     display: ${isOpen ? 'block' : 'none'};
 
     animation: 0.2s ease-out 0s 1 normal none running fadeIn;
+
+    > button {
+      border: 1px solid transparent;
+      border-radius: ${theme.radii.full};
+      background: none;
+
+      position: absolute;
+      top: 24px;
+      right: 24px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: all 0.2s;
+
+      svg {
+        transition: all 0.2s;
+      }
+
+      &:hover {
+        border: 1px solid ${theme.colors.primary500};
+
+        svg {
+          color: ${theme.colors.primary500};
+        }
+      }
+    }
 
     @keyframes fadeIn {
       0% {
