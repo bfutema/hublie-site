@@ -57,20 +57,11 @@ export const SectionItem = styled(Text)`
     }
 
     u {
-      color: ${theme.colors.neutralGray700};
-    }
-
-    i {
-      color: ${theme.colors.neutralGray700};
-    }
-
-    strong {
-      font-size: ${theme.fontSizes['2xl']};
-      font-weight: normal;
+      color: ${theme.colors.primary500};
     }
 
     ins {
-      color: ${theme.colors.neutralGray700};
+      color: ${theme.colors.primary500};
       text-decoration: none;
     }
 

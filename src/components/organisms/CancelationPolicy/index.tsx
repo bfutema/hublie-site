@@ -19,14 +19,14 @@ export const CancelationPolicy: React.FC = () => {
         <p>
           <span>1.1</span> Este Termo e Política de Cancelamento (ou &#34;
           <b>Termos</b>&#34;) regulamenta seu cancelamento do acesso e uso de
-          nossos sites, e‑mails, aplicativos móveis e de todas as ferramentas
+          nossos sites, e-mails, aplicativos móveis e de todas as ferramentas
           tecnológicas que disponibilizamos, aqui incluídas a nossa Política de
           Privacidade e Política de cookies, na medida em que a Hublie respeita
-          sua liberdade <b>para encerrar</b> sua conta a qualquer momento. Antes
-          de fazê-lo, entretanto, é importante considerar que todas as
-          contribuições que você fez no passado serão removidas do site e não
-          poderão ser restauradas, mas permanecerão sob sua responsabilidade e
-          risco.
+          sua liberdade <strong>para encerrar</strong> sua conta a qualquer
+          momento. Antes de fazê-lo, entretanto, é importante considerar que
+          todas as contribuições que você fez no passado serão removidas do site
+          e não poderão ser restauradas, mas permanecerão sob sua
+          responsabilidade e risco.
         </p>
       </SectionItem>
 
@@ -69,7 +69,7 @@ export const CancelationPolicy: React.FC = () => {
           encerrada em nossos arquivos que considerarmos necessário para cumprir
           com nossas obrigações legais e regulamentares, resolver disputas e
           fazer cumprir nossos acordos. Para mais informações, reveja nossa{' '}
-          <ins>Política de Privacidade.</ins>
+          <i>Política de Privacidade.</i>
         </p>
       </SectionItem>
 
