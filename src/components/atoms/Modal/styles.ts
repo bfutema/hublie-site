@@ -23,8 +23,6 @@ export const Container = styled.div<ContainerProps>`
     align-items: center;
     justify-content: center;
 
-    overflow: hidden;
-
     z-index: 10000;
   `}
 `;
