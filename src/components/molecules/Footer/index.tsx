@@ -11,6 +11,7 @@ import youtube from '@/assets/icons/youtube.svg';
 import { Logo } from '@/components/atoms/Logo';
 import { Modal, ModalRef } from '@/components/atoms/Modal';
 import { Text } from '@/components/atoms/Text';
+import { PrivacyPolicy } from '@/components/organisms/PrivacyPolicy';
 import { ContainerWrapper } from '@/components/quarks/ContainerWrapper';
 
 import {
@@ -31,6 +32,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = () => {
   const modalTermsOfUseRef = useRef<ModalRef>(null);
+  const modalPrivacyPolicyRef = useRef<ModalRef>(null);
 
   return (
     <Container>
@@ -73,7 +75,12 @@ export const Footer: React.FC<FooterProps> = () => {
             </li>
 
             <li>
-              <button type="button">Política de privacidade</button>
+              <button
+                type="button"
+                onClick={() => modalPrivacyPolicyRef.current?.open()}
+              >
+                Política de privacidade
+              </button>
             </li>
 
             <li>
@@ -949,6 +956,10 @@ export const Footer: React.FC<FooterProps> = () => {
             </p>
           </TermsOfUseSectionItem>
         </TermsOfUseModalContent>
+      </Modal>
+
+      <Modal ref={modalPrivacyPolicyRef}>
+        <PrivacyPolicy />
       </Modal>
     </Container>
   );

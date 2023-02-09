@@ -214,5 +214,13 @@ export const TermsOfUseSectionItem = styled(Text)`
         display: inline-block;
       }
     }
+
+    @media (max-width: 768px) {
+      padding-left: ${theme.space[4]};
+
+      p {
+        padding-left: ${theme.space[2]};
+      }
+    }
   `}
 `;
