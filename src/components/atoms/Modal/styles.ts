@@ -9,6 +9,7 @@ interface ContainerProps {
 export const Container = styled.div<ContainerProps>`
   ${({ isOpen }: ContainerProps) => css`
     background: rgba(0, 0, 0, 0.2);
+    border: 1px solid red;
 
     opacity: ${isOpen ? 1 : 0};
     visibility: ${isOpen ? 'visible' : 'hidden'};
@@ -42,7 +43,7 @@ export const Dialog = styled.div<DialogProps>`
 
     display: ${isOpen ? 'block' : 'none'};
 
-    animation: 0.2s ease-out 0s 1 normal none running fadeIn;
+    animation: 0.2s ease-out 0s 1 normal none running fadeInModal;
 
     > button {
       border: 1px solid transparent;
@@ -72,7 +73,7 @@ export const Dialog = styled.div<DialogProps>`
       }
     }
 
-    @keyframes fadeIn {
+    @keyframes fadeInModal {
       0% {
         opacity: 0;
         transform: translateY(20%) scale(0.96);
