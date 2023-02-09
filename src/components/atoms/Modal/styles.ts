@@ -25,8 +25,6 @@ export const Container = styled.div<ContainerProps>`
 
     overflow: hidden;
 
-    transition: all 0.2s;
-
     z-index: 10000;
   `}
 `;

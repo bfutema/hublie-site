@@ -16,5 +16,6 @@ export const colors = {
   green300: '#5CCABE',
 
   neutralGray200: '#f5f5f5',
+  neutralGray300: '#eceff2',
   neutralGray700: '#9497A1',
 };
