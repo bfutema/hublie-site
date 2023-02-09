@@ -3,6 +3,7 @@ import { BsArrowRight } from 'react-icons/bs';
 
 import { v4 } from 'uuid';
 
+import { ButtonGroup } from '@/components/atoms/ButtonGroup';
 import { Text } from '@/components/atoms/Text';
 import { ContainerWrapper } from '@/components/quarks/ContainerWrapper';
 
@@ -13,6 +14,7 @@ import {
   JobCard,
   JobCardButton,
   CustomButton,
+  ButtonsWrapper,
 } from './styles';
 
 interface FilterJobsSectionProps {
@@ -20,6 +22,13 @@ interface FilterJobsSectionProps {
 }
 
 export const FilterJobsSection: React.FC<FilterJobsSectionProps> = () => {
+  const buttons = [
+    { name: 'Popular', onClick: () => null },
+    { name: 'Cidades', onClick: () => null },
+    { name: 'Cargos', onClick: () => null },
+    { name: 'Informações Salariais', onClick: () => null },
+  ];
+
   return (
     <Container>
       <ContainerWrapper>
@@ -27,6 +36,10 @@ export const FilterJobsSection: React.FC<FilterJobsSectionProps> = () => {
           Confira <strong> algumas das vagas </strong> <br /> que estão
           esperendo por você
         </Title>
+
+        <ButtonsWrapper>
+          <ButtonGroup buttons={buttons} />
+        </ButtonsWrapper>
 
         <Jobs>
           {Array.from({ length: 4 * 4 }).map(() => {

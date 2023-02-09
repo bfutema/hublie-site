@@ -41,6 +41,16 @@ export const Title = styled(Text)`
   `}
 `;
 
+export const ButtonsWrapper = styled.div`
+  ${({ theme }: ThemeType) => css`
+    margin-top: ${theme.space[20]};
+
+    @media (max-width: 768px) {
+      margin-top: 0;
+    }
+  `}
+`;
+
 export const Jobs = styled.div`
   ${({ theme }: ThemeType) => css`
     width: fit-content;
