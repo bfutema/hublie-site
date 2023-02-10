@@ -27,6 +27,8 @@ export const Container = styled.div<ContainerProps>`
 
     transform: translateX(-50%);
 
+    z-index: 200;
+
     animation: 0.4s ease-out 0s 1 normal none running fadeIn;
 
     p {
