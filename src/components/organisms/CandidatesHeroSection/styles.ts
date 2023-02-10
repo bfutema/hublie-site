@@ -21,7 +21,15 @@ export const Container = styled.div`
 
       p {
         font-size: ${theme.fontSizes.xl};
-        text-align: center;
+      }
+
+      h1 {
+        margin-top: ${theme.space[6]};
+      }
+
+      h1,
+      p {
+        padding: 0 ${theme.space[8]};
       }
     }
   `}
@@ -43,15 +51,14 @@ export const HeroWrapper = styled.div`
 export const Left = styled.div`
   width: 100%;
 
+  gap: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   @media (max-width: 768px) {
-    align-items: center;
-
-    div:has(a) {
-      margin-top: 24px;
+    > div:nth-of-type(2) {
+      margin: 0 auto;
     }
   }
 `;
@@ -85,11 +92,10 @@ export const Title = styled.h1`
     color: ${theme.colors.primary900};
     font-size: ${theme.fontSizes['6xl']};
     font-weight: ${theme.fontWeights.regular};
-    line-height: ${theme.lineHeights.base};
+    line-height: ${theme.lineHeights.shorter};
 
     strong {
       color: ${theme.colors.white};
-      line-height: ${theme.lineHeights.base};
       text-decoration: underline;
     }
 
@@ -102,8 +108,7 @@ export const Title = styled.h1`
     }
 
     @media (max-width: 768px) {
-      line-height: 0;
-      text-align: center;
+      font-size: ${theme.fontSizes['2xl']};
 
       padding: ${theme.space[4]} 0;
 

@@ -4,14 +4,16 @@ import { ThemeType } from '@/interfaces/Theme';
 
 export const Container = styled.div`
   ${({ theme }: ThemeType) => css`
-    height: 786px;
-
     background: ${theme.colors.primary800};
 
     gap: ${theme.space[6]};
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    .enterprises-hero-section-text {
+      line-height: ${theme.lineHeights.short};
+    }
 
     @media (max-width: 768px) {
       height: fit-content;
@@ -23,7 +25,24 @@ export const Container = styled.div`
 
       p {
         font-size: ${theme.fontSizes.xl};
-        text-align: center;
+      }
+
+      h1 {
+        margin-top: ${theme.space[6]};
+      }
+
+      h1 {
+        padding: 0 ${theme.space[8]};
+      }
+
+      p {
+        margin: 0 !important;
+
+        display: block !important;
+
+        br {
+          display: none;
+        }
       }
     }
   `}
@@ -43,19 +62,24 @@ export const HeroWrapper = styled.div`
 `;
 
 export const Left = styled.div`
-  width: 100%;
+  ${({ theme }: ThemeType) => css`
+    width: 100%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-  @media (max-width: 768px) {
-    align-items: center;
+    @media (max-width: 768px) {
+      > div:nth-of-type(2) {
+        margin: 0 auto;
+      }
 
-    div:has(a) {
-      margin-top: 24px;
+      .enterprises-hero-section-text {
+        padding: 0 ${theme.space[8]};
+      }
     }
-  }
+  `}
 `;
 
 export const Right = styled.div`
@@ -87,11 +111,10 @@ export const Title = styled.h1`
     color: ${theme.colors.primary900};
     font-size: ${theme.fontSizes['6xl']};
     font-weight: ${theme.fontWeights.regular};
-    line-height: ${theme.lineHeights.base};
+    line-height: ${theme.lineHeights.shorter};
 
     strong {
       color: ${theme.colors.white};
-      line-height: ${theme.lineHeights.base};
       text-decoration: underline;
     }
 
@@ -104,8 +127,7 @@ export const Title = styled.h1`
     }
 
     @media (max-width: 768px) {
-      line-height: 0;
-      text-align: center;
+      font-size: ${theme.fontSizes['2xl']};
 
       padding: ${theme.space[4]} 0;
 

@@ -73,13 +73,12 @@ export const Title = styled.h1`
     color: ${theme.colors.primary900};
     font-size: ${theme.fontSizes['6xl']};
     font-weight: ${theme.fontWeights.regular};
-    line-height: ${theme.lineHeights.base};
+    line-height: ${theme.lineHeights.shorter};
 
     margin-bottom: ${theme.space[6]};
 
     strong {
       color: ${theme.colors.primary500};
-      line-height: ${theme.lineHeights.base};
       text-decoration: underline;
     }
 
@@ -90,7 +89,7 @@ export const Title = styled.h1`
     }
 
     @media (max-width: 768px) {
-      line-height: 0;
+      font-size: ${theme.fontSizes['2xl']};
       text-align: center;
 
       padding: ${theme.space[4]} 0;

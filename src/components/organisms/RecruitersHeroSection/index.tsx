@@ -31,7 +31,13 @@ export const RecruitersHeroSection: React.FC<
               <p>do Brasil</p>
             </Title>
 
-            <Text color="white" size="xl" weight="minRegular" maxWidth="568px">
+            <Text
+              color="white"
+              size="xl"
+              weight="minRegular"
+              maxWidth="568px"
+              className="enterprises-hero-section-text"
+            >
               <p>
                 Ajude empresas a encontrarem o talento ideal e receba bônus
                 exclusivos!
