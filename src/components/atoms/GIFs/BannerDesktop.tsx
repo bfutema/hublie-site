@@ -17,12 +17,7 @@ export const BannerDesktop: React.FC<IBannerProps> = ({ className }) => {
   };
   return (
     <div className={className}>
-      <Lottie
-        options={defaultOptions}
-        // height={400}
-        width={400}
-        style={{ margin: '0' }}
-      />
+      <Lottie options={defaultOptions} width={400} style={{ margin: '0' }} />
     </div>
   );
 };
@@ -39,7 +34,6 @@ export const BannerMobile: React.FC<IBannerProps> = ({ className }) => {
       <Lottie
         options={defaultOptions}
         height={200}
-        // width={400}
         style={{ margin: '12px 0' }}
       />
     </div>

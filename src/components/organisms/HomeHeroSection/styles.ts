@@ -4,8 +4,6 @@ import { ThemeType } from '@/interfaces/Theme';
 
 export const Container = styled.div`
   ${({ theme }: ThemeType) => css`
-    /* height: 786px; */
-
     background: ${theme.colors.neutralGray300};
 
     display: flex;
@@ -16,6 +14,7 @@ export const Container = styled.div`
       height: fit-content;
 
       padding: ${theme.space[4]};
+      padding: 0;
 
       p {
         font-size: ${theme.fontSizes.xl};
@@ -47,7 +46,6 @@ export const Left = styled.div`
 
 export const Right = styled.div`
   display: flex;
-  /* width: 100%; */
 
   .banner-desktop {
     display: block;

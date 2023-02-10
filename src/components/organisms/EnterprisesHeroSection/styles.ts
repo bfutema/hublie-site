@@ -20,7 +20,8 @@ export const Container = styled.div`
     @media (max-width: 768px) {
       height: fit-content;
 
-      padding: ${theme.space[8]};
+      padding: ${theme.space[4]};
+      padding: 0;
 
       align-items: center;
 
@@ -30,6 +31,57 @@ export const Container = styled.div`
       }
     }
   `}
+`;
+
+export const HeroWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 500px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+`;
+
+export const Left = styled.div`
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    align-items: center;
+
+    div:has(a) {
+      margin-top: 24px;
+    }
+  }
+`;
+
+export const Right = styled.div`
+  display: flex;
+
+  .banner-desktop {
+    display: block;
+  }
+
+  .banner-mobile {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .banner-desktop {
+      display: none;
+    }
+
+    .banner-mobile {
+      display: block;
+    }
+  }
 `;
 
 export const Title = styled.h1`
