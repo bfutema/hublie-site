@@ -13,17 +13,19 @@ import { Container } from './styles';
 interface LogoProps {
   color?: 'white' | 'primary500';
   size?: SizeType;
+  className?: string;
   children?: React.ReactNode;
 }
 
 export const Logo: React.FC<LogoProps> = ({
   color = 'primary500',
   size = 'md',
+  className,
 }) => {
   const width = size === 'sm' ? 122 : size === 'md' ? 200 : 300;
 
   return (
-    <Container>
+    <Container className={className}>
       <Link href="/">
         <Image
           src={color === 'white' ? logoWhite : logo}

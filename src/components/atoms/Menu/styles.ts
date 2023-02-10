@@ -43,8 +43,20 @@ export const Container = styled.ul<ContainerProps>`
       background: transparent;
 
       position: fixed;
-      right: ${theme.space[4]};
+      right: 1.7rem;
 
+      display: none;
+    }
+
+    .container-logo {
+      display: none;
+    }
+
+    .container-button-link {
+      display: none;
+    }
+
+    .container-social-icons {
       display: none;
     }
 
@@ -54,25 +66,93 @@ export const Container = styled.ul<ContainerProps>`
 
       flex-flow: column nowrap;
 
-      padding-top: 3.5rem;
+      padding-top: 2rem;
 
-      background-color: #0d2538;
+      background-color: ${theme.colors.primary500};
 
       position: fixed;
       top: 0;
       right: 0;
+      gap: 0;
 
       transform: ${isOpen ? 'translateX(0)' : 'translateX(100%)'};
 
       transition: transform 0.3s ease-in-out;
 
       li {
-        color: #fff;
-        font-size: ${theme.fontSizes.sm};
+        color: ${theme.colors.white};
+        font-size: ${theme.fontSizes.md};
+        border-top: 1px solid ${theme.colors.white};
+        justify-content: space-between;
+        display: flex;
+
+        transition: all 0.2s;
+
+        padding: 12px 0;
+        margin: 0 2rem;
+
+        &:nth-child(8) {
+          border-bottom: 1px solid ${theme.colors.white};
+        }
+
+        &.active a {
+          color: ${theme.colors.white};
+          text-decoration: none;
+
+          opacity: 1;
+        }
+
+        &.active::after {
+          display: flex;
+          content: '\\279C';
+        }
+
+        &:hover {
+          a {
+            color: ${theme.colors.white};
+            text-decoration: none;
+
+            opacity: 1;
+          }
+        }
+
+        a {
+          color: ${theme.colors.white};
+          opacity: 0.45;
+          text-decoration: none;
+
+          width: fit-content;
+        }
       }
 
       .close-burger-menu-button {
         display: block;
+      }
+
+      .container-button-link {
+        display: block;
+        margin: 28px 0px 48px 2rem;
+      }
+
+      .container-logo {
+        display: block;
+        margin-bottom: ${theme.space[6]};
+        padding-left: 2rem;
+      }
+
+      .container-social-icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+
+        height: 100%;
+
+        background-color: ${theme.colors.white};
+
+        img {
+          cursor: pointer;
+        }
       }
     }
   `}
